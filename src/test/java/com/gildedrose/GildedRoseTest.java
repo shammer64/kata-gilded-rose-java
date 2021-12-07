@@ -62,4 +62,12 @@ class GildedRoseTest {
         assertEquals(12, app.items[0].quality);
     }
 
+    @Test
+    void backstagePassQualityShouldNeverExceed50() {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 50) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(50, app.items[0].quality);
+    }
+
 }
