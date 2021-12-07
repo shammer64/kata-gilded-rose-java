@@ -10,7 +10,7 @@ class GildedRose {
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (items[i].name.equals("Aged Brie")) {
-                handleAgedBrie(i);
+                items[i] = handleAgedBrie(items[i]);
                 continue;
             }
 
@@ -65,9 +65,10 @@ class GildedRose {
         }
     }
 
-    private void handleAgedBrie(int i) {
-        items[i].sellIn--;
-        items[i].quality = items[i].sellIn >= 0 ? items[i].quality + 1 : items[i].quality + 2;
-        items[i].quality = items[i].quality > 50 ? 50 : items[i].quality;
+    private Item handleAgedBrie(Item item) {
+        item.sellIn--;
+        item.quality = item.sellIn >= 0 ? item.quality + 1 : item.quality + 2;
+        item.quality = item.quality > 50 ? 50 : item.quality;
+        return item;
     }
 }
