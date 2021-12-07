@@ -7,6 +7,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class GildedRoseTest {
 
     @Test
+    void agedBrieDecreasesSellInByOne() {
+        Item[] items = new Item[] { new Item("Aged Brie", 2, 1) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(1, app.items[0].sellIn);
+    }
+
+    @Test
     void agedBrieIncreasesQualityByOneOnOrBeforeToSellInDate() {
         Item[] items = new Item[] { new Item("Aged Brie", 2, 1) };
         GildedRose app = new GildedRose(items);
@@ -23,19 +31,19 @@ class GildedRoseTest {
     }
 
     @Test
-    void agedBrieDecreasesSellInByOne() {
-        Item[] items = new Item[] { new Item("Aged Brie", 2, 1) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals(1, app.items[0].sellIn);
-    }
-
-    @Test
     void agedBrieQualityShouldNeverExceed50() {
         Item[] items = new Item[] { new Item("Aged Brie", -2, 49) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals(50, app.items[0].quality);
+    }
+
+    @Test
+    void backstagePassDecreasesSellInByOne() {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(14, app.items[0].sellIn);
     }
 
     @Test
@@ -47,10 +55,11 @@ class GildedRoseTest {
     }
 
     @Test
-    void backstagePassDecreasesSellInByOne() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 10) };
+    void backstagePassIncreasesQualityByTwoUpTo5DaysBeforeSellInDate() {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 9, 10) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(14, app.items[0].sellIn);
+        assertEquals(12, app.items[0].quality);
     }
+
 }

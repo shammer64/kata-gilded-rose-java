@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,6 +29,11 @@ public class GildedRoseRegressionTest {
         System.setOut(new PrintStream(captureStdOut));
     }
 
+    @AfterEach
+    public void teardownCaptureStream() {
+        captureStdOut.reset();
+    }
+
     @Test
     public void testFixtureOutputShouldMatchFor50Days() {
         TexttestFixture.main(new String[]{"50"});
@@ -46,4 +52,5 @@ public class GildedRoseRegressionTest {
         }
         return expectedResults.split(System.lineSeparator());
     }
+
 }
