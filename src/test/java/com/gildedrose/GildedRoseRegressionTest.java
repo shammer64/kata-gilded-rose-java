@@ -39,7 +39,7 @@ public class GildedRoseRegressionTest {
         TexttestFixture.main(new String[]{"50"});
         String[] actualResults = captureStdOut.toString().split(System.lineSeparator());
         for (int index = 0; index < expectedResults.length; index++)
-            assertEquals(expectedResults[index], actualResults[index], "Output differs on line " + index + 1);
+            assertEquals(expectedResults[index], actualResults[index], "Output differs on line " + (index + 1));
     }
 
     private static String[] readExpectedResults() {

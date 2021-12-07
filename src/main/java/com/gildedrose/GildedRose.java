@@ -15,11 +15,7 @@ class GildedRose {
             }
 
             if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                items[i].sellIn--;
-                items[i].quality = (items[i].sellIn > 9) ? items[i].quality + 1 :
-                        (items[i].sellIn >= 4 ) ? items[i].quality + 2 :
-                        (items[i].sellIn >= 0 ) ? items[i].quality + 3 : 0;
-                items[i].quality = items[i].quality > 50 ? 50 : items[i].quality;
+                handleBackstagePass(items[i]);
                 continue;
             }
 
@@ -72,6 +68,14 @@ class GildedRose {
                 }
             }
         }
+    }
+
+    private void handleBackstagePass(Item item) {
+        item.sellIn--;
+        item.quality = (item.sellIn > 9) ? item.quality + 1 :
+                (item.sellIn >= 5 ) ? item.quality + 2 :
+                (item.sellIn >= 0 ) ? item.quality + 3 : 0;
+        item.quality = item.quality > 50 ? 50 : item.quality;
     }
 
     private Item handleAgedBrie(Item item) {
