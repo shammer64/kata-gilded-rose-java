@@ -14,13 +14,11 @@ class GildedRose {
                 case "Aged Brie": 
                     handleAgedBrie(item);
                     continue;
+                case "Backstage passes to a TAFKAL80ETC concert":
+                    handleBackstagePass(item);
+                    continue;
                 default:
                     break;
-            }
-
-            if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                handleBackstagePass(items[i]);
-                continue;
             }
 
             if (items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
