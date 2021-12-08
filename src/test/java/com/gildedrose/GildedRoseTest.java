@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class GildedRoseTest {
 
     @ParameterizedTest
-    @CsvSource({"2"})
-    void agedBrieDecreasesSellInByOne(int sellIn) {
+    @CsvSource({"2,1", "0,-1", "-2,-3"})
+    void agedBrieDecreasesSellInByOne(int sellIn, int expected) {
         Item[] items = new Item[] { new Item("Aged Brie", sellIn, 1) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(1, app.items[0].sellIn);
+        assertEquals(expected, app.items[0].sellIn);
     }
 
     @Test
