@@ -1,14 +1,17 @@
 package com.gildedrose;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
-    @Test
-    void agedBrieDecreasesSellInByOne() {
-        Item[] items = new Item[] { new Item("Aged Brie", 2, 1) };
+    @ParameterizedTest
+    @CsvSource({"2"})
+    void agedBrieDecreasesSellInByOne(int sellIn) {
+        Item[] items = new Item[] { new Item("Aged Brie", sellIn, 1) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals(1, app.items[0].sellIn);
