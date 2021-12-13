@@ -44,12 +44,13 @@ class GildedRoseTest {
         assertEquals(expected, app.items[0].quality);
     }
 
-    @Test
-    void backstagePassDecreasesSellInByOne() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 10) };
+    @ParameterizedTest
+    @CsvSource({"2,1", "0,-1", "-2,-3"})
+    void backstagePassDecreasesSellInByOne(int sellIn, int expected) {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 10) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(14, app.items[0].sellIn);
+        assertEquals(expected, app.items[0].sellIn);
     }
 
     @Test
