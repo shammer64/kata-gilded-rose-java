@@ -17,15 +17,17 @@ class GildedRoseTest {
         assertEquals(expected, app.items[0].sellIn);
     }
 
-    @Test
-    void agedBrieIncreasesQualityByOneOnOrBeforeToSellInDate() {
-        Item[] items = new Item[] { new Item("Aged Brie", 2, 1) };
+    @ParameterizedTest
+    @CsvSource({"3,4,5", "2,5,6", "1,6,7"})
+    void agedBrieIncreasesQualityByOneOnOrBeforeSellInDate(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Aged Brie", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(2, app.items[0].quality);
+        assertEquals(expected, app.items[0].quality);
     }
 
-    @Test
+    @ParameterizedTest
+    @CsvSource({"0,4,6", "-1,6,8", "-2,8,10"})
     void agedBrieIncreasesQualityByTwoAfterSellInDate() {
         Item[] items = new Item[] { new Item("Aged Brie", -2, 5) };
         GildedRose app = new GildedRose(items);
@@ -33,7 +35,8 @@ class GildedRoseTest {
         assertEquals(7, app.items[0].quality);
     }
 
-    @Test
+    @ParameterizedTest
+    @CsvSource({"0,48,50", "-1,49,50", "-2,50,50"})
     void agedBrieQualityShouldNeverExceed50() {
         Item[] items = new Item[] { new Item("Aged Brie", -2, 49) };
         GildedRose app = new GildedRose(items);
