@@ -53,28 +53,40 @@ class GildedRoseTest {
         assertEquals(expected, app.items[0].sellIn);
     }
 
-    @Test
-    void backstagePassIncreasesQualityByOneUpTo10DaysBeforeSellInDate() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 10) };
+    @ParameterizedTest
+    @CsvSource({"13,4,5", "12,5,6", "11,6,7"})
+    void backstagePassIncreasesQualityByOneUpTo10DaysBeforeSellInDate(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(11, app.items[0].quality);
+        assertEquals(expected, app.items[0].quality);
     }
 
-    @Test
-    void backstagePassIncreasesQualityByTwoUpTo5DaysBeforeSellInDate() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 9, 10) };
+    @ParameterizedTest
+    @CsvSource({"10,4,6", "7,12,14", "6,14,16"})
+    void backstagePassIncreasesQualityByTwoUpTo5DaysBeforeSellInDate(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(12, app.items[0].quality);
+        assertEquals(expected, app.items[0].quality);
     }
 
-    @Test
-    void backstagePassQualityShouldNeverExceed50() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 50) };
+    @ParameterizedTest
+    @CsvSource({"5,16,19", "2,25,28", "1,28,31"})
+    void backstagePassIncreasesQualityByThreeUpToSellInDate(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(50, app.items[0].quality);
+        assertEquals(expected, app.items[0].quality);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"11,50,50", "6,49,50", "1,48,50"})
+    void backstagePassQualityShouldNeverExceed50(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(expected, app.items[0].quality);
     }
 
     @Test
@@ -83,14 +95,6 @@ class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals(0, app.items[0].quality);
-    }
-
-    @Test
-    void backstagePassIncreasesQualityByThreeUpToSellInDate() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 4, 35) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals(38, app.items[0].quality);
     }
 
     @Test
