@@ -58,10 +58,7 @@ class GildedRose {
         }
 
         @Override
-        void updateSellIn() {}
-
         public void update() {
-            updateSellIn();
         }
     }
 
