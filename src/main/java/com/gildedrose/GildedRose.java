@@ -26,19 +26,9 @@ class GildedRose {
         }
     }
 
-    private void updateCommonItem(Item item) {
-        item.quality = (item.sellIn > 0) ?
-                (item.quality - 1) :
-                (item.quality - 2);
-        if (item.quality < 0) item.quality = 0;
-        item.sellIn -= 1;
-    }
-
-    private class AgedBrie {
-        private final Item item;
-
-        public AgedBrie(Item item) {
-            this.item = item;
+    private class AgedBrie extends CommonItem {
+      public AgedBrie(Item item) {
+            super(item);
         }
 
         public void update() {
@@ -77,14 +67,18 @@ class GildedRose {
     }
 
     private class CommonItem {
-        private final Item item;
+        protected final Item item;
 
         public CommonItem(Item item) {
             this.item = item;
         }
 
         public void update() {
-            updateCommonItem(item);
+            item.quality = (item.sellIn > 0) ?
+                    (item.quality - 1) :
+                    (item.quality - 2);
+            if (item.quality < 0) item.quality = 0;
+            item.sellIn -= 1;
         }
     }
 }
