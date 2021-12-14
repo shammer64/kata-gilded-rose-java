@@ -20,7 +20,7 @@ class GildedRose {
                     new Sulfuras(item).update();
                     continue;
                 default:
-                    updateCommonItem(item);
+                    new CommonItem(item).update();
                     continue;
             }
         }
@@ -73,6 +73,18 @@ class GildedRose {
 
         public void update() {
 
+        }
+    }
+
+    private class CommonItem {
+        private final Item item;
+
+        public CommonItem(Item item) {
+            this.item = item;
+        }
+
+        public void update() {
+            updateCommonItem(item);
         }
     }
 }
