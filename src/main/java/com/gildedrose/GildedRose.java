@@ -53,11 +53,10 @@ class GildedRose {
         }
     }
 
-    private class Sulfuras {
-        private final Item item;
+    private class Sulfuras extends CommonItem {
 
         public Sulfuras(Item item) {
-            this.item = item;
+            super(item);
         }
 
         public void update() {
