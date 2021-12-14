@@ -24,7 +24,8 @@ class GildedRose {
                     itemUpdater.update();
                     continue;
                 default:
-                    new CommonItem(item).update();
+                    itemUpdater = new CommonItem(item);
+                    itemUpdater.update();
                     continue;
             }
         }
