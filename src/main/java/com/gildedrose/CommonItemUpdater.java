@@ -1,10 +1,9 @@
 package com.gildedrose;
 
 class CommonItemUpdater extends ItemUpdater {
-    protected final Item item;
 
     public CommonItemUpdater(Item item) {
-        this.item = item;
+        super(item);
     }
 
     @Override

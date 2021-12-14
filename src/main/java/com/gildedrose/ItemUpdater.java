@@ -1,6 +1,12 @@
 package com.gildedrose;
 
 public abstract class ItemUpdater {
+    final Item item;
+
+    public ItemUpdater(Item item) {
+        this.item = item;
+    }
+
     public static ItemUpdater getInstance(Item item) {
         ItemUpdater itemUpdater;
         switch (item.name) {
