@@ -44,12 +44,6 @@ class GildedRose {
             super(item);
         }
 
-        public void update() {
-            updateQuality();
-            checkQualityBounds();
-            updateSellIn();
-        }
-
         @Override
         protected void updateQuality() {
             item.quality = (item.sellIn > 10) ? item.quality + 1 :
