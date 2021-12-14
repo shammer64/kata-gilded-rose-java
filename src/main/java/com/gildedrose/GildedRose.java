@@ -11,7 +11,7 @@ class GildedRose {
         for (Item item : items) {
             switch (item.name) {
                 case "Aged Brie": 
-                    new AgedBrie().update(item);
+                    new AgedBrie(item).update();
                     continue;
                 case "Backstage passes to a TAFKAL80ETC concert":
                     updateBackstagePass(item);
@@ -46,15 +46,17 @@ class GildedRose {
         item.quality = item.quality > 50 ? 50 : item.quality;
     }
 
-    private void updateAgedBrie(Item item) {
-        item.sellIn--;
-        item.quality = item.sellIn >= 0 ? item.quality + 1 : item.quality + 2;
-        item.quality = item.quality > 50 ? 50 : item.quality;
-    }
-
     private class AgedBrie {
-        public void update(Item item) {
-            updateAgedBrie(item);
+        private final Item item;
+
+        public AgedBrie(Item item) {
+            this.item = item;
+        }
+
+        public void update() {
+            item.sellIn--;
+            item.quality = item.sellIn >= 0 ? item.quality + 1 : item.quality + 2;
+            item.quality = item.quality > 50 ? 50 : item.quality;
         }
     }
 }
