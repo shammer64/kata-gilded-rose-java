@@ -49,7 +49,7 @@ class GildedRose {
                     (item.sellIn > 5 ) ? item.quality + 2 :
                     (item.sellIn > 0 ) ? item.quality + 3 : 0;
             item.quality = item.quality > 50 ? 50 : item.quality;
-            item.sellIn--;
+            updateSellIn();
         }
     }
 
@@ -79,7 +79,7 @@ class GildedRose {
             updateSellIn();
         }
 
-        private void updateSellIn() {
+        protected void updateSellIn() {
             item.sellIn -= 1;
         }
     }
