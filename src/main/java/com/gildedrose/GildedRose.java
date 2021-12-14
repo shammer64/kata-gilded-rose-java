@@ -20,7 +20,8 @@ class GildedRose {
                     itemUpdater.update();
                     continue;
                 case "Sulfuras, Hand of Ragnaros":
-                    new Sulfuras(item).update();
+                    itemUpdater = new Sulfuras(item);
+                    itemUpdater.update();
                     continue;
                 default:
                     new CommonItem(item).update();
