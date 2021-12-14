@@ -16,7 +16,8 @@ class GildedRose {
                     itemUpdater.update();
                     continue;
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    new BackstagePass(item).update();
+                    itemUpdater = new BackstagePass(item);
+                    itemUpdater.update();
                     continue;
                 case "Sulfuras, Hand of Ragnaros":
                     new Sulfuras(item).update();
