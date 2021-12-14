@@ -48,7 +48,7 @@ class GildedRose {
             item.quality = (item.sellIn > 10) ? item.quality + 1 :
                     (item.sellIn > 5 ) ? item.quality + 2 :
                     (item.sellIn > 0 ) ? item.quality + 3 : 0;
-            item.quality = item.quality > 50 ? 50 : item.quality;
+            checkQualityBounds();
             updateSellIn();
         }
     }
@@ -82,13 +82,13 @@ class GildedRose {
             updateSellIn();
         }
 
-        private void checkQualityBounds() {
+        void checkQualityBounds() {
             item.quality =  (item.quality < 0) ?
                 item.quality = 0 :
                 item.quality > 50 ? 50 : item.quality;
         }
 
-        protected void updateSellIn() {
+        void updateSellIn() {
             item.sellIn -= 1;
         }
     }
