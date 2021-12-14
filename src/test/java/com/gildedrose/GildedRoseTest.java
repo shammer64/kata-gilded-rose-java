@@ -89,28 +89,31 @@ class GildedRoseTest {
         assertEquals(expected, app.items[0].quality);
     }
 
-    @Test
-    void backstagePassQualityShouldBeZeroAfterConcert() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 0, 50) };
+    @ParameterizedTest
+    @CsvSource({"0,10", "-1,10", "-10,10"})
+    void backstagePassQualityShouldBeZeroAfterConcert(int sellIn, int quality) {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals(0, app.items[0].quality);
     }
 
-    @Test
-    void sulfurasNeverDecreaseSellInDate() {
-        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 0, 80) };
+    @ParameterizedTest
+    @CsvSource({"10,10,10", "0,10,0", "-10,10,-10"})
+    void sulfurasNeverDecreaseSellInDate(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(0, app.items[0].sellIn);
+        assertEquals(expected, app.items[0].sellIn);
     }
 
-    @Test
-    void sulfurasNeverDecreaseInQuality() {
-        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 0, 80) };
+    @ParameterizedTest
+    @CsvSource({"10,10,10", "0,10,10", "-10,10,10"})
+    void sulfurasNeverDecreaseInQuality(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(80, app.items[0].quality);
+        assertEquals(expected, app.items[0].quality);
     }
 
 }
