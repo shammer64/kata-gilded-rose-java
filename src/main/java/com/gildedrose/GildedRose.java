@@ -9,9 +9,11 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
+            CommonItem itemUpdater = null;
             switch (item.name) {
                 case "Aged Brie":
-                    new AgedBrie(item).update();
+                    itemUpdater = new AgedBrie(item);
+                    itemUpdater.update();
                     continue;
                 case "Backstage passes to a TAFKAL80ETC concert":
                     new BackstagePass(item).update();
