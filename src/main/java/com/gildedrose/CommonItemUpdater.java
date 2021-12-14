@@ -1,12 +1,13 @@
 package com.gildedrose;
 
-class CommonItemUpdater {
+class CommonItemUpdater extends ItemUpdater {
     protected final Item item;
 
     public CommonItemUpdater(Item item) {
         this.item = item;
     }
 
+    @Override
     public void update() {
         updateQuality();
         checkQualityBounds();
