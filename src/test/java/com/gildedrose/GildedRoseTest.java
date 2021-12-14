@@ -123,4 +123,12 @@ class GildedRoseTest {
         app.updateQuality();
         assertEquals(9, app.items[0].sellIn);
     }
+
+    @Test
+    void commonItemsShouldDecreaseQualityByOneBeforeSellInDate() {
+        Item[] items = new Item[] { new Item("Common Item", 1, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(9, app.items[0].quality);
+    }
 }

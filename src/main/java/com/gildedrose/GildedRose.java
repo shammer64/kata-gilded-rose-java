@@ -20,6 +20,7 @@ class GildedRose {
                 case "Sulfuras, Hand of Ragnaros":
                     continue;
                 default:
+                    item.quality -= 1;
                     item.sellIn -= 1;
                     continue;
             }
