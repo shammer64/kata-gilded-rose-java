@@ -9,7 +9,7 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            CommonItem itemUpdater = null;
+            CommonItemUpdater itemUpdater = null;
             switch (item.name) {
                 case "Aged Brie":
                     itemUpdater = new AgedBrie(item);
@@ -21,7 +21,7 @@ class GildedRose {
                     itemUpdater = new Sulfuras(item);
                     break;
                 default:
-                    itemUpdater = new CommonItem(item);
+                    itemUpdater = new CommonItemUpdater(item);
                     break;
             }
             itemUpdater.update();

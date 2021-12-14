@@ -1,9 +1,9 @@
 package com.gildedrose;
 
-class CommonItem {
+class CommonItemUpdater {
     protected final Item item;
 
-    public CommonItem(Item item) {
+    public CommonItemUpdater(Item item) {
         this.item = item;
     }
 
