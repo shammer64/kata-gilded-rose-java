@@ -75,17 +75,21 @@ class GildedRose {
         }
 
         public void update() {
-            item.quality = (item.sellIn > 0) ?
-                    (item.quality - 1) :
-                    (item.quality - 2);
+            updateQuality();
             checkQualityBounds();
             updateSellIn();
         }
 
+        void updateQuality() {
+            item.quality = (item.sellIn > 0) ?
+                    (item.quality - 1) :
+                    (item.quality - 2);
+        }
+
         void checkQualityBounds() {
             item.quality =  (item.quality < 0) ?
-                item.quality = 0 :
-                item.quality > 50 ? 50 : item.quality;
+                    item.quality = 0 :
+                    item.quality > 50 ? 50 : item.quality;
         }
 
         void updateSellIn() {
