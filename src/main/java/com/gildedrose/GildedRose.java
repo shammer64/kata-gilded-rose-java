@@ -59,8 +59,11 @@ class GildedRose {
             super(item);
         }
 
-        public void update() {
+        @Override
+        protected void updateSellIn() {}
 
+        public void update() {
+            updateSellIn();
         }
     }
 
@@ -76,6 +79,7 @@ class GildedRose {
                     (item.quality - 1) :
                     (item.quality - 2);
             if (item.quality < 0) item.quality = 0;
+            item.quality = item.quality > 50 ? 50 : item.quality;
             updateSellIn();
         }
 
