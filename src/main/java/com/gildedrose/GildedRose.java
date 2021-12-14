@@ -17,12 +17,17 @@ class GildedRose {
                     handleBackstagePass(item);
                     continue;
                 case "Sulfuras, Hand of Ragnaros":
+                    handleSulfuras(item);
                     continue;
                 default:
                     handleCommonItem(item);
                     continue;
             }
         }
+    }
+
+    private void handleSulfuras(Item item) {
+
     }
 
     private void handleCommonItem(Item item) {
