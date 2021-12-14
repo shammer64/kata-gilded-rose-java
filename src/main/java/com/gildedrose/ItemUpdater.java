@@ -11,6 +11,7 @@ public abstract class ItemUpdater {
     static {
         CLASS_MAP.put("Aged Brie", AgedBrieUpdater.class);
         CLASS_MAP.put("Backstage passes to a TAFKAL80ETC concert", BackstagePassUpdater.class);
+        CLASS_MAP.put("Sulfuras, Hand of Ragnaros", SulfurasUpdater.class);
     }
 
     public ItemUpdater(Item item) {
@@ -28,7 +29,7 @@ public abstract class ItemUpdater {
                     itemUpdater = (ItemUpdater) CLASS_MAP.get(item.name).getDeclaredConstructor(Item.class).newInstance(item);
                     break;
                 case "Sulfuras, Hand of Ragnaros":
-                    itemUpdater = new SulfurasUpdater(item);
+                    itemUpdater = (ItemUpdater) CLASS_MAP.get(item.name).getDeclaredConstructor(Item.class).newInstance(item);
                     break;
                 default:
                     itemUpdater = new CommonItemUpdater(item);
