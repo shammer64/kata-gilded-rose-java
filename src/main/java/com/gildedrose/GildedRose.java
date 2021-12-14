@@ -76,6 +76,10 @@ class GildedRose {
                     (item.quality - 1) :
                     (item.quality - 2);
             if (item.quality < 0) item.quality = 0;
+            updateSellIn();
+        }
+
+        private void updateSellIn() {
             item.sellIn -= 1;
         }
     }
