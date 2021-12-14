@@ -34,7 +34,7 @@ class GildedRose {
         public void update() {
             item.quality = item.sellIn > 0 ? item.quality + 1 : item.quality + 2;
             item.quality = item.quality > 50 ? 50 : item.quality;
-            item.sellIn--;
+            updateSellIn();
         }
     }
 
