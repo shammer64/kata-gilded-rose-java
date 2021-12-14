@@ -38,11 +38,10 @@ class GildedRose {
         }
     }
 
-    private class BackstagePass {
-        private final Item item;
+    private class BackstagePass extends CommonItem {
 
         public BackstagePass(Item item) {
-            this.item = item;
+            super(item);
         }
 
         public void update() {
