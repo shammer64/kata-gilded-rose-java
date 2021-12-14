@@ -26,10 +26,6 @@ class GildedRose {
         }
     }
 
-    private void updateSulfuras(Item item) {
-
-    }
-
     private void updateCommonItem(Item item) {
         item.quality = (item.sellIn > 0) ?
                 (item.quality - 1) :
@@ -76,7 +72,7 @@ class GildedRose {
         }
 
         public void update() {
-            updateSulfuras(item);
+
         }
     }
 }
