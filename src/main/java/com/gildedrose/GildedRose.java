@@ -38,14 +38,6 @@ class GildedRose {
         item.sellIn -= 1;
     }
 
-    private void updateBackstagePass(Item item) {
-        item.sellIn--;
-        item.quality = (item.sellIn > 9) ? item.quality + 1 :
-                (item.sellIn >= 5 ) ? item.quality + 2 :
-                (item.sellIn >= 0 ) ? item.quality + 3 : 0;
-        item.quality = item.quality > 50 ? 50 : item.quality;
-    }
-
     private class AgedBrie {
         private final Item item;
 
@@ -68,7 +60,11 @@ class GildedRose {
         }
 
         public void update() {
-            updateBackstagePass(item);
+            item.sellIn--;
+            item.quality = (item.sellIn > 9) ? item.quality + 1 :
+                    (item.sellIn >= 5 ) ? item.quality + 2 :
+                    (item.sellIn >= 0 ) ? item.quality + 3 : 0;
+            item.quality = item.quality > 50 ? 50 : item.quality;
         }
     }
 
