@@ -116,28 +116,31 @@ class GildedRoseTest {
         assertEquals(expected, app.items[0].quality);
     }
 
-    @Test
-    void commonItemsShouldDecreaseSellInByOne() {
-        Item[] items = new Item[] { new Item("Common Item", 10, 10) };
+    @ParameterizedTest
+    @CsvSource({"1,10,0", "0,10,-1", "-1,10,-2"})
+    void commonItemsShouldDecreaseSellInByOne(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Common Item", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(9, app.items[0].sellIn);
+        assertEquals(expected, app.items[0].sellIn);
     }
 
-    @Test
-    void commonItemsShouldDecreaseQualityByOneBeforeSellInDate() {
-        Item[] items = new Item[] { new Item("Common Item", 1, 10) };
+    @ParameterizedTest
+    @CsvSource({"3,10,9", "2,9,8", "1,8,7"})
+    void commonItemsShouldDecreaseQualityByOneBeforeSellInDate(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Common Item", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(9, app.items[0].quality);
+        assertEquals(expected, app.items[0].quality);
     }
 
-    @Test
-    void commonItemsShouldNotDecreaseQualityBelowZero() {
-        Item[] items = new Item[] { new Item("Common Item", 0, 1) };
+    @ParameterizedTest
+    @CsvSource({"3,0,0", "0,0,0", "-1,1,0"})
+    void commonItemsShouldNotDecreaseQualityBelowZero(int sellIn, int quality, int expected) {
+        Item[] items = new Item[] { new Item("Common Item", sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(0, app.items[0].quality);
+        assertEquals(expected, app.items[0].quality);
     }
 
 }
