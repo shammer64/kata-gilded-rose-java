@@ -17,7 +17,7 @@ class GildedRose {
                     new BackstagePass(item).update();
                     continue;
                 case "Sulfuras, Hand of Ragnaros":
-                    updateSulfuras(item);
+                    new Sulfuras(item).update();
                     continue;
                 default:
                     updateCommonItem(item);
@@ -61,7 +61,7 @@ class GildedRose {
     }
 
     private class BackstagePass {
-        private Item item;
+        private final Item item;
 
         public BackstagePass(Item item) {
             this.item = item;
@@ -69,6 +69,18 @@ class GildedRose {
 
         public void update() {
             updateBackstagePass(item);
+        }
+    }
+
+    private class Sulfuras {
+        private final Item item;
+
+        public Sulfuras(Item item) {
+            this.item = item;
+        }
+
+        public void update() {
+            updateSulfuras(item);
         }
     }
 }
