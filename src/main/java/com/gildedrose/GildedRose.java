@@ -9,9 +9,7 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            ItemUpdater itemUpdater = null;
-            itemUpdater = ItemUpdater.getInstance(item);
-            itemUpdater.update();
+            ItemUpdater.getInstance(item).update();
         }
     }
 }
