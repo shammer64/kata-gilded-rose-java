@@ -131,4 +131,13 @@ class GildedRoseTest {
         app.updateQuality();
         assertEquals(9, app.items[0].quality);
     }
+
+    @Test
+    void commonItemsShouldNotDecreaseQualityBelowZero() {
+        Item[] items = new Item[] { new Item("Common Item", 0, 1) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(0, app.items[0].quality);
+    }
+
 }
