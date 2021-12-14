@@ -11,26 +11,26 @@ class GildedRose {
         for (Item item : items) {
             switch (item.name) {
                 case "Aged Brie": 
-                    handleAgedBrie(item);
+                    updateAgedBrie(item);
                     continue;
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    handleBackstagePass(item);
+                    updateBackstagePass(item);
                     continue;
                 case "Sulfuras, Hand of Ragnaros":
-                    handleSulfuras(item);
+                    updateSulfuras(item);
                     continue;
                 default:
-                    handleCommonItem(item);
+                    updateCommonItem(item);
                     continue;
             }
         }
     }
 
-    private void handleSulfuras(Item item) {
+    private void updateSulfuras(Item item) {
 
     }
 
-    private void handleCommonItem(Item item) {
+    private void updateCommonItem(Item item) {
         item.quality = (item.sellIn > 0) ?
                 (item.quality - 1) :
                 (item.quality - 2);
@@ -38,7 +38,7 @@ class GildedRose {
         item.sellIn -= 1;
     }
 
-    private void handleBackstagePass(Item item) {
+    private void updateBackstagePass(Item item) {
         item.sellIn--;
         item.quality = (item.sellIn > 9) ? item.quality + 1 :
                 (item.sellIn >= 5 ) ? item.quality + 2 :
@@ -46,7 +46,7 @@ class GildedRose {
         item.quality = item.quality > 50 ? 50 : item.quality;
     }
 
-    private void handleAgedBrie(Item item) {
+    private void updateAgedBrie(Item item) {
         item.sellIn--;
         item.quality = item.sellIn >= 0 ? item.quality + 1 : item.quality + 2;
         item.quality = item.quality > 50 ? 50 : item.quality;
