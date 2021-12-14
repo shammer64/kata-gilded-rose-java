@@ -15,4 +15,16 @@ public class ConjuredItemUpdaterTest {
 
         assertEquals(9, item.sellIn);
     }
+
+    @Test
+    void conjuredItemShouldDecreaseQualityByTwoEachDay() {
+        Item item = new Item("Conjured Mana Cake", 10, 10);
+        ConjuredItemUpdater updater = new ConjuredItemUpdater(item);
+
+        updater.update();
+
+        assertEquals(8, item.quality);
+    }
+
+
 }
