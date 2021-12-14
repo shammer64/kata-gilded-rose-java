@@ -32,9 +32,14 @@ class GildedRose {
         }
 
         public void update() {
-            item.quality = item.sellIn > 0 ? item.quality + 1 : item.quality + 2;
+            updateQuality();
             checkQualityBounds();
             updateSellIn();
+        }
+
+        @Override
+        void updateQuality() {
+            item.quality = item.sellIn > 0 ? item.quality + 1 : item.quality + 2;
         }
     }
 
@@ -45,7 +50,7 @@ class GildedRose {
         }
 
         @Override
-        protected void updateQuality() {
+        void updateQuality() {
             item.quality = (item.sellIn > 10) ? item.quality + 1 :
                     (item.sellIn > 5 ) ? item.quality + 2 :
                     (item.sellIn > 0 ) ? item.quality + 3 : 0;
@@ -59,7 +64,7 @@ class GildedRose {
         }
 
         @Override
-        protected void updateSellIn() {}
+        void updateSellIn() {}
 
         public void update() {
             updateSellIn();
