@@ -1,7 +1,7 @@
 package com.gildedrose;
 
-class AgedBrie extends CommonItemUpdater {
-    public AgedBrie(Item item) {
+class AgedBrieUpdater extends CommonItemUpdater {
+    public AgedBrieUpdater(Item item) {
         super(item);
     }
 

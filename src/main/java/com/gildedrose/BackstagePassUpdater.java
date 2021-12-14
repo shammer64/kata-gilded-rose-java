@@ -1,8 +1,8 @@
 package com.gildedrose;
 
-class BackstagePass extends CommonItemUpdater {
+class BackstagePassUpdater extends CommonItemUpdater {
 
-    public BackstagePass(Item item) {
+    public BackstagePassUpdater(Item item) {
         super(item);
     }
 
