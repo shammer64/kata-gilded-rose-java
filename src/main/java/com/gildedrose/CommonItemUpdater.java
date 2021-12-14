@@ -7,10 +7,11 @@ class CommonItemUpdater extends ItemUpdater {
     }
 
     @Override
-    public void update() {
+    public ItemUpdater update() {
         updateQuality();
         checkQualityBounds();
         updateSellIn();
+        return this;
     }
 
     void updateQuality() {

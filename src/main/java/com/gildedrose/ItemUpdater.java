@@ -29,5 +29,5 @@ public abstract class ItemUpdater {
         return itemUpdater;
     }
 
-    public abstract void update();
+    public abstract ItemUpdater update();
 }

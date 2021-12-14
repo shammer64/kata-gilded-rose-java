@@ -7,6 +7,7 @@ class SulfurasUpdater extends CommonItemUpdater {
     }
 
     @Override
-    public void update() {
+    public ItemUpdater update() {
+        return this;
     }
 }
