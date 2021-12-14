@@ -21,20 +21,8 @@ public abstract class ItemUpdater {
     public static ItemUpdater getInstance(Item item) {
         ItemUpdater itemUpdater = null;
         try {
-            switch (item.name) {
-                case "Aged Brie":
-                    itemUpdater = (ItemUpdater) CLASS_MAP.get(item.name).getDeclaredConstructor(Item.class).newInstance(item);
-                    break;
-                case "Backstage passes to a TAFKAL80ETC concert":
-                    itemUpdater = (ItemUpdater) CLASS_MAP.get(item.name).getDeclaredConstructor(Item.class).newInstance(item);
-                    break;
-                case "Sulfuras, Hand of Ragnaros":
-                    itemUpdater = (ItemUpdater) CLASS_MAP.get(item.name).getDeclaredConstructor(Item.class).newInstance(item);
-                    break;
-                default:
-                    itemUpdater = new CommonItemUpdater(item);
-                    break;
-            }
+            Class updaterClass = CLASS_MAP.getOrDefault(item.name, CommonItemUpdater.class);
+            itemUpdater = (ItemUpdater) updaterClass.getDeclaredConstructor(Item.class).newInstance(item);
         } catch (Exception e) {
             e.printStackTrace();
         }
