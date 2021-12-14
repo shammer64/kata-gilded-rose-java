@@ -12,6 +12,7 @@ public abstract class ItemUpdater {
         CLASS_MAP.put("Aged Brie", AgedBrieUpdater.class);
         CLASS_MAP.put("Backstage passes to a TAFKAL80ETC concert", BackstagePassUpdater.class);
         CLASS_MAP.put("Sulfuras, Hand of Ragnaros", SulfurasUpdater.class);
+        CLASS_MAP.put("Conjured Mana Cake", ConjuredItemUpdater.class);
     }
 
     public ItemUpdater(Item item) {
