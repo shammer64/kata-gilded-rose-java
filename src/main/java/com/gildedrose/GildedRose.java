@@ -1,7 +1,5 @@
 package com.gildedrose;
 
-import java.util.Arrays;
-
 class GildedRose {
     Item[] items;
 

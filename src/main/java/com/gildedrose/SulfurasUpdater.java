@@ -12,8 +12,10 @@ class SulfurasUpdater extends CommonItemUpdater {
     }
 
     @Override
-    void checkQualityBounds() {    }
+    void checkQualityBounds() {
+    }
 
     @Override
-    void updateSellIn() {}
+    void updateSellIn() {
+    }
 }
