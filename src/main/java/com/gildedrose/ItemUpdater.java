@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class ItemUpdater {
-    final Item item;
+    protected final Item item;
     private static final Map<String, Class> CLASS_MAP = new HashMap<>();
 
     static {

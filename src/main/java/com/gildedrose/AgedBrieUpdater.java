@@ -6,7 +6,7 @@ class AgedBrieUpdater extends CommonItemUpdater {
     }
 
     @Override
-    void updateQuality() {
+    protected void updateQuality() {
         item.quality = item.sellIn > 0 ? item.quality + 1 : item.quality + 2;
     }
 }
