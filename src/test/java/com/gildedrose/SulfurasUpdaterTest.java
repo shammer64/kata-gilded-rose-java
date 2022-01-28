@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SulfurasUpdaterTest {
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "SellIn should never change")
     @CsvSource({"10,10,10", "0,10,0", "-10,10,-10"})
-    void sulfurasNeverDecreaseSellInDate(int sellIn, int quality, int expected) {
+    void shouldNeverChangeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
@@ -19,9 +19,9 @@ class SulfurasUpdaterTest {
         assertEquals(expected, item.sellIn);
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "Quality should never change")
     @CsvSource({"10,10,80", "0,10,80", "-10,10,80"})
-    void sulfurasNeverDecreaseInQuality(int sellIn, int quality, int expected) {
+    void shouldNeverChangeInQuality(int sellIn, int quality, int expected) {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
