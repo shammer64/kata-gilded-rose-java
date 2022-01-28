@@ -19,24 +19,15 @@ class SulfurasUpdaterTest {
         assertEquals(expected, item.sellIn);
     }
 
-    @Test
-    void sulfurasNeverDecreaseSellInDate() {
-        Item item = new Item("Sulfuras, Hand of Ragnaros", 10, 10);
+    @ParameterizedTest
+    @CsvSource({"10,10,80", "0,10,80", "-10,10,80"})
+    void sulfurasNeverDecreaseInQuality(int sellIn, int quality, int expected) {
+        Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
         itemUpdater.update();
 
-        assertEquals(10, item.sellIn);
-    }
-
-    @Test
-    void sulfurasQualityIsAlways80() {
-        Item item = new Item("Sulfuras, Hand of Ragnaros", 10, 10);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
-
-        itemUpdater.update();
-
-        assertEquals(80, item.quality);
+        assertEquals(expected, item.quality);
     }
 
 }

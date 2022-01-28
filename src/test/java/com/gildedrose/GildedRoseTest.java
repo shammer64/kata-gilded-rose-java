@@ -97,15 +97,6 @@ class GildedRoseTest {
         assertEquals(0, app.items[0].quality);
     }
 
-    @ParameterizedTest
-    @CsvSource({"10,10,80", "0,10,80", "-10,10,80"})
-    void sulfurasNeverDecreaseInQuality(int sellIn, int quality, int expected) {
-        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", sellIn, quality) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals(expected, app.items[0].quality);
-    }
-
     @ParameterizedTest(name = "Common Items decrease sellIn by 1")
     @CsvSource({"1,10,0", "0,10,-1", "-1,10,-2"})
     void commonItemsShouldDecreaseSellInByOne(int sellIn, int quality, int expected) {
