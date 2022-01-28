@@ -30,4 +30,6 @@ public abstract class ItemUpdater {
     }
 
     public abstract ItemUpdater update();
+
+//    public abstract Item update(Item item);
 }

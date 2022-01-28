@@ -9,9 +9,9 @@ public class ConjuredItemUpdaterTest {
     @Test
     void conjuredItemShouldDecreaseSellInByOneEachDay() {
         Item item = new Item("Conjured Mana Cake", 10, 10);
-        ConjuredItemUpdater updater = new ConjuredItemUpdater(item);
+        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        updater.update();
+        itemUpdater.update();
 
         assertEquals(9, item.sellIn);
     }
@@ -19,9 +19,9 @@ public class ConjuredItemUpdaterTest {
     @Test
     void conjuredItemShouldDecreaseQualityByTwoEachDay() {
         Item item = new Item("Conjured Mana Cake", 10, 10);
-        ConjuredItemUpdater updater = new ConjuredItemUpdater(item);
+        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        updater.update();
+        itemUpdater.update();
 
         assertEquals(8, item.quality);
     }
