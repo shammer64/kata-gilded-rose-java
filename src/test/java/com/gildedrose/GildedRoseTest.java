@@ -7,33 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
-    @ParameterizedTest(name = "Aged Brie decreases sellIn by 1")
-    @CsvSource({"2,1", "0,-1", "-2,-3"})
-    void agedBrieDecreasesSellInByOne(int sellIn, int expected) {
-        Item[] items = new Item[] { new Item("Aged Brie", sellIn, 1) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals(expected, app.items[0].sellIn);
-    }
-
-    @ParameterizedTest(name = "Aged Brie increases quality by 1 before sellIn")
-    @CsvSource({"3,4,5", "2,5,6", "1,6,7"})
-    void agedBrieIncreasesQualityByOneOnOrBeforeSellInDate(int sellIn, int quality, int expected) {
-        Item[] items = new Item[] { new Item("Aged Brie", sellIn, quality) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals(expected, app.items[0].quality);
-    }
-
-    @ParameterizedTest(name = "Aged Brie increases quality by 2 after sellIn")
-    @CsvSource({"0,4,6", "-1,6,8", "-2,8,10"})
-    void agedBrieIncreasesQualityByTwoAfterSellInDate(int sellIn, int quality, int expected) {
-        Item[] items = new Item[] { new Item("Aged Brie", sellIn, quality) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals(expected, app.items[0].quality);
-    }
-
     @ParameterizedTest(name = "Aged Brie quality never exceeds 50")
     @CsvSource({"0,48,50", "-1,49,50", "-2,50,50"})
     void agedBrieQualityShouldNeverExceed50(int sellIn, int quality, int expected) {
