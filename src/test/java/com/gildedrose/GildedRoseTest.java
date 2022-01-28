@@ -7,15 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
-    @ParameterizedTest(name = "Aged Brie quality never exceeds 50")
-    @CsvSource({"0,48,50", "-1,49,50", "-2,50,50"})
-    void agedBrieQualityShouldNeverExceed50(int sellIn, int quality, int expected) {
-        Item[] items = new Item[] { new Item("Aged Brie", sellIn, quality) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals(expected, app.items[0].quality);
-    }
-
     @ParameterizedTest(name = "Backstage Pass decreases sellIn by 1")
     @CsvSource({"2,1", "0,-1", "-2,-3"})
     void backstagePassDecreasesSellInByOne(int sellIn, int expected) {
