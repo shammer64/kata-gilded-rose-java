@@ -41,5 +41,4 @@ public class ConjuredItemUpdaterTest {
         assertEquals(expected, item.quality);
     }
 
-
 }
