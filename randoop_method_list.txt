@@ -1,0 +1,5 @@
+com.gildedRose.CommonItemUpdater.update(com.gildedrose.Item)
+com.gildedRose.AgedBrieUpdater.update(com.gildedrose.Item)
+com.gildedRose.BackstagePassUpdater.update(com.gildedrose.Item)
+com.gildedRose.ConjuredItemUpdater.update(com.gildedrose.Item)
+com.gildedRose.SulfurasUpdater.update(com.gildedrose.Item)

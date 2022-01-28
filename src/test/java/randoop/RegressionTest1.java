@@ -12,78 +12,7 @@ public class RegressionTest1 {
     @Test
     public void test0501() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0501");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 0", (int) '#', 32);
-        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
-        java.lang.String str5 = item3.toString();
-        int int6 = item3.sellIn;
-        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!, -1, 0, 35, 32" + "'", str5, "hi!, -1, 0, 35, 32");
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 35 + "'", int6 == 35);
-    }
-
-    @Test
-    public void test0502() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0502");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
-        item3.name = "hi!";
-        java.lang.String str6 = item3.name;
-        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater7 = new com.gildedrose.ConjuredItemUpdater(item3);
-        item3.quality = (short) 10;
-        int int10 = item3.quality;
-        int int11 = item3.sellIn;
-        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater12 = new com.gildedrose.ConjuredItemUpdater(item3);
-        int int13 = item3.quality;
-        int int14 = item3.sellIn;
-        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
-        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 10 + "'", int10 == 10);
-        org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
-        org.junit.Assert.assertTrue("'" + int13 + "' != '" + 10 + "'", int13 == 10);
-        org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
-    }
-
-    @Test
-    public void test0503() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0503");
-        com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 52, -1, 97", 52, (-1));
-        item3.sellIn = (byte) 100;
-    }
-
-    @Test
-    public void test0504() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0504");
-        com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 97", 0, 0);
-        int int4 = item3.quality;
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-    }
-
-    @Test
-    public void test0505() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0505");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 10, 1, 10, 10, -1", (int) (byte) 10, (int) (short) -1);
-    }
-
-    @Test
-    public void test0506() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0506");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
-        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
-        int int5 = item3.quality;
-        int int6 = item3.sellIn;
-        int int7 = item3.sellIn;
-        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 97 + "'", int5 == 97);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
-        org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
-    }
-
-    @Test
-    public void test0507() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0507");
+            System.out.format("%n%s%n", "RegressionTest1.test0501");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -104,9 +33,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0508() throws Throwable {
+    public void test0502() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0508");
+            System.out.format("%n%s%n", "RegressionTest1.test0502");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         int int4 = item3.quality;
         item3.quality = 100;
@@ -122,9 +51,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0509() throws Throwable {
+    public void test0503() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0509");
+            System.out.format("%n%s%n", "RegressionTest1.test0503");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -144,9 +73,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0510() throws Throwable {
+    public void test0504() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0510");
+            System.out.format("%n%s%n", "RegressionTest1.test0504");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 0", (int) (short) 100, 97);
         item3.sellIn = 100;
         int int6 = item3.quality;
@@ -154,9 +83,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0511() throws Throwable {
+    public void test0505() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0511");
+            System.out.format("%n%s%n", "RegressionTest1.test0505");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 10", (int) (byte) -1, (int) 'a');
         item3.name = "hi!, 10, 0";
         java.lang.String str6 = item3.name;
@@ -168,9 +97,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0512() throws Throwable {
+    public void test0506() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0512");
+            System.out.format("%n%s%n", "RegressionTest1.test0506");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         item3.name = ", 100, 1";
@@ -182,16 +111,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0513() throws Throwable {
+    public void test0507() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0513");
+            System.out.format("%n%s%n", "RegressionTest1.test0507");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 52", (int) (short) 10, (int) '#');
     }
 
     @Test
-    public void test0514() throws Throwable {
+    public void test0508() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0514");
+            System.out.format("%n%s%n", "RegressionTest1.test0508");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 10, 0", 10, 32);
         java.lang.String str4 = item3.name;
         java.lang.Class<?> wildcardClass5 = item3.getClass();
@@ -200,9 +129,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0515() throws Throwable {
+    public void test0509() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0515");
+            System.out.format("%n%s%n", "RegressionTest1.test0509");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -225,24 +154,24 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0516() throws Throwable {
+    public void test0510() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0516");
+            System.out.format("%n%s%n", "RegressionTest1.test0510");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 10, 0", (-1), 52);
         item3.quality = 35;
     }
 
     @Test
-    public void test0517() throws Throwable {
+    public void test0511() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0517");
+            System.out.format("%n%s%n", "RegressionTest1.test0511");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 10, 0, 10, 1", (int) (short) 100, (-1));
     }
 
     @Test
-    public void test0518() throws Throwable {
+    public void test0512() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0518");
+            System.out.format("%n%s%n", "RegressionTest1.test0512");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.quality = (byte) -1;
@@ -257,9 +186,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0519() throws Throwable {
+    public void test0513() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0519");
+            System.out.format("%n%s%n", "RegressionTest1.test0513");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -283,18 +212,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0520() throws Throwable {
+    public void test0514() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0520");
+            System.out.format("%n%s%n", "RegressionTest1.test0514");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 52, 0", (int) (short) -1, (int) (short) 100);
         java.lang.Class<?> wildcardClass4 = item3.getClass();
         org.junit.Assert.assertNotNull(wildcardClass4);
     }
 
     @Test
-    public void test0521() throws Throwable {
+    public void test0515() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0521");
+            System.out.format("%n%s%n", "RegressionTest1.test0515");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -312,9 +241,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0522() throws Throwable {
+    public void test0516() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0522");
+            System.out.format("%n%s%n", "RegressionTest1.test0516");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -329,9 +258,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0523() throws Throwable {
+    public void test0517() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0523");
+            System.out.format("%n%s%n", "RegressionTest1.test0517");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -350,9 +279,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0524() throws Throwable {
+    public void test0518() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0524");
+            System.out.format("%n%s%n", "RegressionTest1.test0518");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         int int4 = item3.quality;
         item3.quality = 100;
@@ -364,18 +293,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0525() throws Throwable {
+    public void test0519() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0525");
+            System.out.format("%n%s%n", "RegressionTest1.test0519");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", 100, (int) (short) 0);
         item3.sellIn = 100;
         item3.quality = (short) 1;
     }
 
     @Test
-    public void test0526() throws Throwable {
+    public void test0520() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0526");
+            System.out.format("%n%s%n", "RegressionTest1.test0520");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -399,9 +328,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0527() throws Throwable {
+    public void test0521() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0527");
+            System.out.format("%n%s%n", "RegressionTest1.test0521");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -415,9 +344,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0528() throws Throwable {
+    public void test0522() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0528");
+            System.out.format("%n%s%n", "RegressionTest1.test0522");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -432,9 +361,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0529() throws Throwable {
+    public void test0523() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0529");
+            System.out.format("%n%s%n", "RegressionTest1.test0523");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 10", (int) '#', 0);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         java.lang.Class<?> wildcardClass5 = conjuredItemUpdater4.getClass();
@@ -442,9 +371,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0530() throws Throwable {
+    public void test0524() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0530");
+            System.out.format("%n%s%n", "RegressionTest1.test0524");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -458,9 +387,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0531() throws Throwable {
+    public void test0525() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0531");
+            System.out.format("%n%s%n", "RegressionTest1.test0525");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 1", (int) '#', (int) (byte) 100);
         int int4 = item3.sellIn;
         item3.sellIn = 10;
@@ -468,9 +397,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0532() throws Throwable {
+    public void test0526() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0532");
+            System.out.format("%n%s%n", "RegressionTest1.test0526");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -487,9 +416,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0533() throws Throwable {
+    public void test0527() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0533");
+            System.out.format("%n%s%n", "RegressionTest1.test0527");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -514,9 +443,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0534() throws Throwable {
+    public void test0528() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0534");
+            System.out.format("%n%s%n", "RegressionTest1.test0528");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) 1, (-1));
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -524,9 +453,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0535() throws Throwable {
+    public void test0529() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0535");
+            System.out.format("%n%s%n", "RegressionTest1.test0529");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 52", (int) (byte) 10, (-1));
         int int4 = item3.sellIn;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -540,9 +469,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0536() throws Throwable {
+    public void test0530() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0536");
+            System.out.format("%n%s%n", "RegressionTest1.test0530");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.name;
         item3.quality = (byte) 0;
@@ -554,9 +483,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0537() throws Throwable {
+    public void test0531() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0537");
+            System.out.format("%n%s%n", "RegressionTest1.test0531");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -578,9 +507,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0538() throws Throwable {
+    public void test0532() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0538");
+            System.out.format("%n%s%n", "RegressionTest1.test0532");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         java.lang.String str4 = item3.toString();
         int int5 = item3.sellIn;
@@ -594,9 +523,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0539() throws Throwable {
+    public void test0533() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0539");
+            System.out.format("%n%s%n", "RegressionTest1.test0533");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -617,9 +546,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0540() throws Throwable {
+    public void test0534() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0540");
+            System.out.format("%n%s%n", "RegressionTest1.test0534");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -643,9 +572,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0541() throws Throwable {
+    public void test0535() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0541");
+            System.out.format("%n%s%n", "RegressionTest1.test0535");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", 1, 97);
         java.lang.String str4 = item3.toString();
         item3.quality = (byte) 1;
@@ -653,9 +582,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0542() throws Throwable {
+    public void test0536() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0542");
+            System.out.format("%n%s%n", "RegressionTest1.test0536");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -671,9 +600,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0543() throws Throwable {
+    public void test0537() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0543");
+            System.out.format("%n%s%n", "RegressionTest1.test0537");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         int int4 = item3.quality;
         item3.name = "hi!, -1, 97, 0, 1";
@@ -681,9 +610,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0544() throws Throwable {
+    public void test0538() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0544");
+            System.out.format("%n%s%n", "RegressionTest1.test0538");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         int int4 = item3.quality;
         item3.quality = 100;
@@ -697,28 +626,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0545() throws Throwable {
+    public void test0539() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0545");
+            System.out.format("%n%s%n", "RegressionTest1.test0539");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) 'a', (int) '#');
         item3.quality = (byte) -1;
     }
 
     @Test
-    public void test0546() throws Throwable {
+    public void test0540() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0546");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 97, 97", 0, 10);
-        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
-        com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
-        org.junit.Assert.assertNotNull(itemUpdater4);
-        org.junit.Assert.assertNotNull(itemUpdater5);
-    }
-
-    @Test
-    public void test0547() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0547");
+            System.out.format("%n%s%n", "RegressionTest1.test0540");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -737,9 +655,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0548() throws Throwable {
+    public void test0541() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0548");
+            System.out.format("%n%s%n", "RegressionTest1.test0541");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -754,9 +672,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0549() throws Throwable {
+    public void test0542() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0549");
+            System.out.format("%n%s%n", "RegressionTest1.test0542");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -767,9 +685,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0550() throws Throwable {
+    public void test0543() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0550");
+            System.out.format("%n%s%n", "RegressionTest1.test0543");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -784,9 +702,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0551() throws Throwable {
+    public void test0544() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0551");
+            System.out.format("%n%s%n", "RegressionTest1.test0544");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -805,9 +723,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0552() throws Throwable {
+    public void test0545() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0552");
+            System.out.format("%n%s%n", "RegressionTest1.test0545");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -823,9 +741,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0553() throws Throwable {
+    public void test0546() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0553");
+            System.out.format("%n%s%n", "RegressionTest1.test0546");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 52", (int) '#', (int) (byte) 10);
         java.lang.String str4 = item3.name;
         java.lang.String str5 = item3.name;
@@ -834,9 +752,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0554() throws Throwable {
+    public void test0547() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0554");
+            System.out.format("%n%s%n", "RegressionTest1.test0547");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -859,36 +777,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0555() throws Throwable {
+    public void test0548() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0555");
+            System.out.format("%n%s%n", "RegressionTest1.test0548");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) (short) 0, (int) '4');
         item3.sellIn = (short) 1;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater6 = new com.gildedrose.ConjuredItemUpdater(item3);
     }
 
     @Test
-    public void test0556() throws Throwable {
+    public void test0549() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0556");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
-        int int4 = item3.sellIn;
-        int int5 = item3.sellIn;
-        com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
-        int int7 = item3.quality;
-        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater8 = new com.gildedrose.ConjuredItemUpdater(item3);
-        com.gildedrose.ItemUpdater itemUpdater9 = conjuredItemUpdater8.update();
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 100 + "'", int4 == 100);
-        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 100 + "'", int5 == 100);
-        org.junit.Assert.assertNotNull(itemUpdater6);
-        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 10 + "'", int7 == 10);
-        org.junit.Assert.assertNotNull(itemUpdater9);
-    }
-
-    @Test
-    public void test0557() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0557");
+            System.out.format("%n%s%n", "RegressionTest1.test0549");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -905,9 +805,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0558() throws Throwable {
+    public void test0550() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0558");
+            System.out.format("%n%s%n", "RegressionTest1.test0550");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -922,9 +822,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0559() throws Throwable {
+    public void test0551() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0559");
+            System.out.format("%n%s%n", "RegressionTest1.test0551");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) (byte) -1, (int) (short) 1);
         item3.name = "hi!, -1, 0";
         int int6 = item3.quality;
@@ -934,9 +834,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0560() throws Throwable {
+    public void test0552() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0560");
+            System.out.format("%n%s%n", "RegressionTest1.test0552");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         int int4 = item3.sellIn;
         int int5 = item3.sellIn;
@@ -951,9 +851,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0561() throws Throwable {
+    public void test0553() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0561");
+            System.out.format("%n%s%n", "RegressionTest1.test0553");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.sellIn = (short) 0;
@@ -965,9 +865,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0562() throws Throwable {
+    public void test0554() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0562");
+            System.out.format("%n%s%n", "RegressionTest1.test0554");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.quality = '4';
         java.lang.String str6 = item3.name;
@@ -977,9 +877,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0563() throws Throwable {
+    public void test0555() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0563");
+            System.out.format("%n%s%n", "RegressionTest1.test0555");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         item3.name = "hi!, -1, 0";
         item3.sellIn = (byte) 0;
@@ -987,9 +887,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0564() throws Throwable {
+    public void test0556() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0564");
+            System.out.format("%n%s%n", "RegressionTest1.test0556");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -1001,9 +901,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0565() throws Throwable {
+    public void test0557() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0565");
+            System.out.format("%n%s%n", "RegressionTest1.test0557");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -1018,30 +918,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0566() throws Throwable {
+    public void test0558() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0566");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
-        java.lang.String str4 = item3.toString();
-        int int5 = item3.quality;
-        com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
-        item3.name = "";
-        item3.sellIn = 52;
-        int int11 = item3.quality;
-        java.lang.String str12 = item3.name;
-        com.gildedrose.ItemUpdater itemUpdater13 = com.gildedrose.ItemUpdater.getInstance(item3);
-        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, -1, 97" + "'", str4, "hi!, -1, 97");
-        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 97 + "'", int5 == 97);
-        org.junit.Assert.assertNotNull(itemUpdater6);
-        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 97 + "'", int11 == 97);
-        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
-        org.junit.Assert.assertNotNull(itemUpdater13);
-    }
-
-    @Test
-    public void test0567() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0567");
+            System.out.format("%n%s%n", "RegressionTest1.test0558");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -1058,9 +937,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0568() throws Throwable {
+    public void test0559() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0568");
+            System.out.format("%n%s%n", "RegressionTest1.test0559");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.quality;
@@ -1076,17 +955,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0569() throws Throwable {
+    public void test0560() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0569");
+            System.out.format("%n%s%n", "RegressionTest1.test0560");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", 10, 0);
         item3.quality = 10;
     }
 
     @Test
-    public void test0570() throws Throwable {
+    public void test0561() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0570");
+            System.out.format("%n%s%n", "RegressionTest1.test0561");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 0", (int) (short) 100, 97);
         java.lang.String str4 = item3.toString();
         int int5 = item3.sellIn;
@@ -1095,25 +974,25 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0571() throws Throwable {
+    public void test0562() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0571");
+            System.out.format("%n%s%n", "RegressionTest1.test0562");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 10, -1, 100", 35, (int) '#');
     }
 
     @Test
-    public void test0572() throws Throwable {
+    public void test0563() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0572");
+            System.out.format("%n%s%n", "RegressionTest1.test0563");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, -1, 10", (int) ' ', (int) (short) 1);
         item3.name = "hi!, 1, 32";
         item3.sellIn = 100;
     }
 
     @Test
-    public void test0573() throws Throwable {
+    public void test0564() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0573");
+            System.out.format("%n%s%n", "RegressionTest1.test0564");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1125,9 +1004,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0574() throws Throwable {
+    public void test0565() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0574");
+            System.out.format("%n%s%n", "RegressionTest1.test0565");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1147,9 +1026,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0575() throws Throwable {
+    public void test0566() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0575");
+            System.out.format("%n%s%n", "RegressionTest1.test0566");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 10", (int) (byte) -1, 100);
         java.lang.String str4 = item3.toString();
         java.lang.String str5 = item3.toString();
@@ -1158,9 +1037,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0576() throws Throwable {
+    public void test0567() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0576");
+            System.out.format("%n%s%n", "RegressionTest1.test0567");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -1175,9 +1054,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0577() throws Throwable {
+    public void test0568() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0577");
+            System.out.format("%n%s%n", "RegressionTest1.test0568");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 1", 0, (int) '#');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         java.lang.String str5 = item3.toString();
@@ -1186,9 +1065,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0578() throws Throwable {
+    public void test0569() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0578");
+            System.out.format("%n%s%n", "RegressionTest1.test0569");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -1208,9 +1087,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0579() throws Throwable {
+    public void test0570() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0579");
+            System.out.format("%n%s%n", "RegressionTest1.test0570");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 10", 1, 97);
         item3.quality = (byte) 1;
         item3.quality = (byte) 10;
@@ -1219,18 +1098,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0580() throws Throwable {
+    public void test0571() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0580");
+            System.out.format("%n%s%n", "RegressionTest1.test0571");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) -1, (int) (short) 0);
         java.lang.String str4 = item3.name;
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ", 100, 1" + "'", str4, ", 100, 1");
     }
 
     @Test
-    public void test0581() throws Throwable {
+    public void test0572() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0581");
+            System.out.format("%n%s%n", "RegressionTest1.test0572");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -1243,17 +1122,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0582() throws Throwable {
+    public void test0573() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0582");
+            System.out.format("%n%s%n", "RegressionTest1.test0573");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (byte) 10);
         item3.name = "hi!, 52, 97, 0, 10, 1, 0";
     }
 
     @Test
-    public void test0583() throws Throwable {
+    public void test0574() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0583");
+            System.out.format("%n%s%n", "RegressionTest1.test0574");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         java.lang.String str4 = item3.toString();
         int int5 = item3.sellIn;
@@ -1264,9 +1143,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0584() throws Throwable {
+    public void test0575() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0584");
+            System.out.format("%n%s%n", "RegressionTest1.test0575");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         java.lang.String str5 = item3.name;
@@ -1280,9 +1159,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0585() throws Throwable {
+    public void test0576() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0585");
+            System.out.format("%n%s%n", "RegressionTest1.test0576");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -1295,9 +1174,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0586() throws Throwable {
+    public void test0577() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0586");
+            System.out.format("%n%s%n", "RegressionTest1.test0577");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 52, 0", 100, 0);
         int int4 = item3.quality;
         java.lang.Class<?> wildcardClass5 = item3.getClass();
@@ -1306,9 +1185,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0587() throws Throwable {
+    public void test0578() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0587");
+            System.out.format("%n%s%n", "RegressionTest1.test0578");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1320,9 +1199,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0588() throws Throwable {
+    public void test0579() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0588");
+            System.out.format("%n%s%n", "RegressionTest1.test0579");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         int int6 = item3.sellIn;
@@ -1336,9 +1215,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0589() throws Throwable {
+    public void test0580() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0589");
+            System.out.format("%n%s%n", "RegressionTest1.test0580");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1361,9 +1240,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0590() throws Throwable {
+    public void test0581() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0590");
+            System.out.format("%n%s%n", "RegressionTest1.test0581");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.quality;
@@ -1378,9 +1257,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0591() throws Throwable {
+    public void test0582() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0591");
+            System.out.format("%n%s%n", "RegressionTest1.test0582");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         item3.sellIn = (byte) 100;
         java.lang.String str6 = item3.name;
@@ -1388,16 +1267,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0592() throws Throwable {
+    public void test0583() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0592");
+            System.out.format("%n%s%n", "RegressionTest1.test0583");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 0, (int) (short) 1);
     }
 
     @Test
-    public void test0593() throws Throwable {
+    public void test0584() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0593");
+            System.out.format("%n%s%n", "RegressionTest1.test0584");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1415,9 +1294,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0594() throws Throwable {
+    public void test0585() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0594");
+            System.out.format("%n%s%n", "RegressionTest1.test0585");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1431,9 +1310,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0595() throws Throwable {
+    public void test0586() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0595");
+            System.out.format("%n%s%n", "RegressionTest1.test0586");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = conjuredItemUpdater4.update();
@@ -1443,9 +1322,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0596() throws Throwable {
+    public void test0587() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0596");
+            System.out.format("%n%s%n", "RegressionTest1.test0587");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -1460,9 +1339,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0597() throws Throwable {
+    public void test0588() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0597");
+            System.out.format("%n%s%n", "RegressionTest1.test0588");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -1486,9 +1365,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0598() throws Throwable {
+    public void test0589() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0598");
+            System.out.format("%n%s%n", "RegressionTest1.test0589");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -1506,9 +1385,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0599() throws Throwable {
+    public void test0590() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0599");
+            System.out.format("%n%s%n", "RegressionTest1.test0590");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", 0, 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -1520,9 +1399,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0600() throws Throwable {
+    public void test0591() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0600");
+            System.out.format("%n%s%n", "RegressionTest1.test0591");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -1537,9 +1416,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0601() throws Throwable {
+    public void test0592() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0601");
+            System.out.format("%n%s%n", "RegressionTest1.test0592");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1556,9 +1435,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0602() throws Throwable {
+    public void test0593() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0602");
+            System.out.format("%n%s%n", "RegressionTest1.test0593");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) '4', (int) (byte) 0);
         java.lang.String str4 = item3.toString();
         java.lang.Class<?> wildcardClass5 = item3.getClass();
@@ -1567,9 +1446,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0603() throws Throwable {
+    public void test0594() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0603");
+            System.out.format("%n%s%n", "RegressionTest1.test0594");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -1589,9 +1468,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0604() throws Throwable {
+    public void test0595() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0604");
+            System.out.format("%n%s%n", "RegressionTest1.test0595");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 97, (int) (short) -1);
         java.lang.String str4 = item3.name;
         java.lang.Class<?> wildcardClass5 = item3.getClass();
@@ -1600,9 +1479,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0605() throws Throwable {
+    public void test0596() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0605");
+            System.out.format("%n%s%n", "RegressionTest1.test0596");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -1623,17 +1502,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0606() throws Throwable {
+    public void test0597() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0606");
+            System.out.format("%n%s%n", "RegressionTest1.test0597");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 10", (int) (byte) -1, (int) (byte) 100);
         item3.name = ", 100, 1, 0, 0";
     }
 
     @Test
-    public void test0607() throws Throwable {
+    public void test0598() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0607");
+            System.out.format("%n%s%n", "RegressionTest1.test0598");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) (short) 100, (int) (short) 1);
         java.lang.String str4 = item3.name;
         item3.quality = (short) -1;
@@ -1645,16 +1524,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0608() throws Throwable {
+    public void test0599() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0608");
+            System.out.format("%n%s%n", "RegressionTest1.test0599");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) (byte) 0, 0);
     }
 
     @Test
-    public void test0609() throws Throwable {
+    public void test0600() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0609");
+            System.out.format("%n%s%n", "RegressionTest1.test0600");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         item3.quality = 0;
         java.lang.String str6 = item3.name;
@@ -1664,9 +1543,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0610() throws Throwable {
+    public void test0601() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0610");
+            System.out.format("%n%s%n", "RegressionTest1.test0601");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 97", (-1), (int) (short) 0);
         item3.sellIn = (-1);
         int int6 = item3.quality;
@@ -1674,9 +1553,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0611() throws Throwable {
+    public void test0602() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0611");
+            System.out.format("%n%s%n", "RegressionTest1.test0602");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -1693,9 +1572,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0612() throws Throwable {
+    public void test0603() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0612");
+            System.out.format("%n%s%n", "RegressionTest1.test0603");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", 10, (int) '4');
         item3.sellIn = 'a';
         item3.sellIn = (short) 100;
@@ -1705,16 +1584,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0613() throws Throwable {
+    public void test0604() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0613");
+            System.out.format("%n%s%n", "RegressionTest1.test0604");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 100, 100", 52, (int) (byte) 10);
     }
 
     @Test
-    public void test0614() throws Throwable {
+    public void test0605() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0614");
+            System.out.format("%n%s%n", "RegressionTest1.test0605");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1732,18 +1611,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0615() throws Throwable {
+    public void test0606() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0615");
+            System.out.format("%n%s%n", "RegressionTest1.test0606");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 97, 10, 97", (int) 'a', (int) ' ');
         int int4 = item3.sellIn;
         org.junit.Assert.assertTrue("'" + int4 + "' != '" + 97 + "'", int4 == 97);
     }
 
     @Test
-    public void test0616() throws Throwable {
+    public void test0607() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0616");
+            System.out.format("%n%s%n", "RegressionTest1.test0607");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (byte) -1);
         int int4 = item3.sellIn;
         java.lang.String str5 = item3.name;
@@ -1758,41 +1637,25 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0617() throws Throwable {
+    public void test0608() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0617");
+            System.out.format("%n%s%n", "RegressionTest1.test0608");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (-1));
         java.lang.Class<?> wildcardClass4 = item3.getClass();
         org.junit.Assert.assertNotNull(wildcardClass4);
     }
 
     @Test
-    public void test0618() throws Throwable {
+    public void test0609() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0618");
+            System.out.format("%n%s%n", "RegressionTest1.test0609");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 0, 35, 32", (int) (short) 0, (int) (short) 10);
     }
 
     @Test
-    public void test0619() throws Throwable {
+    public void test0610() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0619");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
-        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
-        int int5 = item3.sellIn;
-        item3.name = ", 100, 1, 0, 0";
-        item3.name = ", -1, 52";
-        item3.name = "hi!, 52, 10";
-        com.gildedrose.ItemUpdater itemUpdater12 = com.gildedrose.ItemUpdater.getInstance(item3);
-        org.junit.Assert.assertNotNull(itemUpdater4);
-        org.junit.Assert.assertTrue("'" + int5 + "' != '" + (-1) + "'", int5 == (-1));
-        org.junit.Assert.assertNotNull(itemUpdater12);
-    }
-
-    @Test
-    public void test0620() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0620");
+            System.out.format("%n%s%n", "RegressionTest1.test0610");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1813,18 +1676,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0621() throws Throwable {
+    public void test0611() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0621");
+            System.out.format("%n%s%n", "RegressionTest1.test0611");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 10, -1", 97, (int) '#');
         int int4 = item3.quality;
         org.junit.Assert.assertTrue("'" + int4 + "' != '" + 35 + "'", int4 == 35);
     }
 
     @Test
-    public void test0622() throws Throwable {
+    public void test0612() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0622");
+            System.out.format("%n%s%n", "RegressionTest1.test0612");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -1843,9 +1706,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0623() throws Throwable {
+    public void test0613() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0623");
+            System.out.format("%n%s%n", "RegressionTest1.test0613");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -1864,17 +1727,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0624() throws Throwable {
+    public void test0614() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0624");
+            System.out.format("%n%s%n", "RegressionTest1.test0614");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, -1, 10", (int) ' ', (int) (short) 1);
         item3.quality = (byte) -1;
     }
 
     @Test
-    public void test0625() throws Throwable {
+    public void test0615() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0625");
+            System.out.format("%n%s%n", "RegressionTest1.test0615");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -1888,9 +1751,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0626() throws Throwable {
+    public void test0616() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0626");
+            System.out.format("%n%s%n", "RegressionTest1.test0616");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1906,9 +1769,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0627() throws Throwable {
+    public void test0617() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0627");
+            System.out.format("%n%s%n", "RegressionTest1.test0617");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) 1, (-1));
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1917,9 +1780,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0628() throws Throwable {
+    public void test0618() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0628");
+            System.out.format("%n%s%n", "RegressionTest1.test0618");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -1934,9 +1797,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0629() throws Throwable {
+    public void test0619() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0629");
+            System.out.format("%n%s%n", "RegressionTest1.test0619");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -1949,9 +1812,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0630() throws Throwable {
+    public void test0620() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0630");
+            System.out.format("%n%s%n", "RegressionTest1.test0620");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1975,9 +1838,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0631() throws Throwable {
+    public void test0621() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0631");
+            System.out.format("%n%s%n", "RegressionTest1.test0621");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -1992,9 +1855,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0632() throws Throwable {
+    public void test0622() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0632");
+            System.out.format("%n%s%n", "RegressionTest1.test0622");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -2009,9 +1872,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0633() throws Throwable {
+    public void test0623() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0633");
+            System.out.format("%n%s%n", "RegressionTest1.test0623");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -2030,9 +1893,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0634() throws Throwable {
+    public void test0624() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0634");
+            System.out.format("%n%s%n", "RegressionTest1.test0624");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -2052,9 +1915,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0635() throws Throwable {
+    public void test0625() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0635");
+            System.out.format("%n%s%n", "RegressionTest1.test0625");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -2070,9 +1933,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0636() throws Throwable {
+    public void test0626() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0636");
+            System.out.format("%n%s%n", "RegressionTest1.test0626");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -2091,9 +1954,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0637() throws Throwable {
+    public void test0627() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0637");
+            System.out.format("%n%s%n", "RegressionTest1.test0627");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -2110,9 +1973,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0638() throws Throwable {
+    public void test0628() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0638");
+            System.out.format("%n%s%n", "RegressionTest1.test0628");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -2130,9 +1993,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0639() throws Throwable {
+    public void test0629() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0639");
+            System.out.format("%n%s%n", "RegressionTest1.test0629");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         java.lang.String str5 = item3.name;
@@ -2144,9 +2007,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0640() throws Throwable {
+    public void test0630() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0640");
+            System.out.format("%n%s%n", "RegressionTest1.test0630");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.sellIn;
@@ -2163,18 +2026,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0641() throws Throwable {
+    public void test0631() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0641");
+            System.out.format("%n%s%n", "RegressionTest1.test0631");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 97", (int) (short) 100, 0);
         java.lang.Class<?> wildcardClass4 = item3.getClass();
         org.junit.Assert.assertNotNull(wildcardClass4);
     }
 
     @Test
-    public void test0642() throws Throwable {
+    public void test0632() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0642");
+            System.out.format("%n%s%n", "RegressionTest1.test0632");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -2191,9 +2054,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0643() throws Throwable {
+    public void test0633() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0643");
+            System.out.format("%n%s%n", "RegressionTest1.test0633");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.sellIn;
@@ -2208,9 +2071,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0644() throws Throwable {
+    public void test0634() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0644");
+            System.out.format("%n%s%n", "RegressionTest1.test0634");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.quality = (short) -1;
@@ -2219,9 +2082,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0645() throws Throwable {
+    public void test0635() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0645");
+            System.out.format("%n%s%n", "RegressionTest1.test0635");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (byte) -1);
         int int4 = item3.sellIn;
         java.lang.String str5 = item3.name;
@@ -2235,32 +2098,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0646() throws Throwable {
+    public void test0636() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0646");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
-        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
-        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
-        int int6 = item3.sellIn;
-        item3.name = "";
-        com.gildedrose.ItemUpdater itemUpdater9 = com.gildedrose.ItemUpdater.getInstance(item3);
-        com.gildedrose.ItemUpdater itemUpdater10 = itemUpdater9.update();
-        com.gildedrose.ItemUpdater itemUpdater11 = itemUpdater9.update();
-        com.gildedrose.ItemUpdater itemUpdater12 = itemUpdater9.update();
-        com.gildedrose.ItemUpdater itemUpdater13 = itemUpdater12.update();
-        org.junit.Assert.assertNotNull(itemUpdater4);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
-        org.junit.Assert.assertNotNull(itemUpdater9);
-        org.junit.Assert.assertNotNull(itemUpdater10);
-        org.junit.Assert.assertNotNull(itemUpdater11);
-        org.junit.Assert.assertNotNull(itemUpdater12);
-        org.junit.Assert.assertNotNull(itemUpdater13);
-    }
-
-    @Test
-    public void test0647() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0647");
+            System.out.format("%n%s%n", "RegressionTest1.test0636");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -2278,9 +2118,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0648() throws Throwable {
+    public void test0637() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0648");
+            System.out.format("%n%s%n", "RegressionTest1.test0637");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (-1));
         java.lang.String str4 = item3.name;
         java.lang.String str5 = item3.toString();
@@ -2293,9 +2133,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0649() throws Throwable {
+    public void test0638() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0649");
+            System.out.format("%n%s%n", "RegressionTest1.test0638");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.quality = (byte) -1;
@@ -2315,9 +2155,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0650() throws Throwable {
+    public void test0639() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0650");
+            System.out.format("%n%s%n", "RegressionTest1.test0639");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         item3.name = "hi!";
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -2330,9 +2170,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0651() throws Throwable {
+    public void test0640() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0651");
+            System.out.format("%n%s%n", "RegressionTest1.test0640");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -2351,17 +2191,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0652() throws Throwable {
+    public void test0641() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0652");
+            System.out.format("%n%s%n", "RegressionTest1.test0641");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) 'a', 0);
         item3.quality = 100;
     }
 
     @Test
-    public void test0653() throws Throwable {
+    public void test0642() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0653");
+            System.out.format("%n%s%n", "RegressionTest1.test0642");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.quality = (byte) -1;
@@ -2378,9 +2218,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0654() throws Throwable {
+    public void test0643() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0654");
+            System.out.format("%n%s%n", "RegressionTest1.test0643");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.name = "hi!, 52, 97";
@@ -2397,9 +2237,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0655() throws Throwable {
+    public void test0644() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0655");
+            System.out.format("%n%s%n", "RegressionTest1.test0644");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 100, (int) (short) 1);
         item3.sellIn = (short) 100;
         int int6 = item3.quality;
@@ -2411,9 +2251,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0656() throws Throwable {
+    public void test0645() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0656");
+            System.out.format("%n%s%n", "RegressionTest1.test0645");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.name = "hi!, 52, 97";
@@ -2430,9 +2270,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0657() throws Throwable {
+    public void test0646() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0657");
+            System.out.format("%n%s%n", "RegressionTest1.test0646");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.sellIn;
         int int5 = item3.quality;
@@ -2444,9 +2284,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0658() throws Throwable {
+    public void test0647() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0658");
+            System.out.format("%n%s%n", "RegressionTest1.test0647");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.quality = (byte) 10;
@@ -2459,9 +2299,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0659() throws Throwable {
+    public void test0648() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0659");
+            System.out.format("%n%s%n", "RegressionTest1.test0648");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -2476,9 +2316,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0660() throws Throwable {
+    public void test0649() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0660");
+            System.out.format("%n%s%n", "RegressionTest1.test0649");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 10, 0", (int) (byte) 100, (int) (short) 1);
         item3.sellIn = 10;
         java.lang.String str6 = item3.toString();
@@ -2489,9 +2329,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0661() throws Throwable {
+    public void test0650() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0661");
+            System.out.format("%n%s%n", "RegressionTest1.test0650");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -2513,9 +2353,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0662() throws Throwable {
+    public void test0651() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0662");
+            System.out.format("%n%s%n", "RegressionTest1.test0651");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -2538,9 +2378,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0663() throws Throwable {
+    public void test0652() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0663");
+            System.out.format("%n%s%n", "RegressionTest1.test0652");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = conjuredItemUpdater4.update();
@@ -2556,9 +2396,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0664() throws Throwable {
+    public void test0653() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0664");
+            System.out.format("%n%s%n", "RegressionTest1.test0653");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         java.lang.String str4 = item3.name;
         int int5 = item3.sellIn;
@@ -2572,9 +2412,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0665() throws Throwable {
+    public void test0654() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0665");
+            System.out.format("%n%s%n", "RegressionTest1.test0654");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.name = ", 100, 1";
@@ -2583,9 +2423,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0666() throws Throwable {
+    public void test0655() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0666");
+            System.out.format("%n%s%n", "RegressionTest1.test0655");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         java.lang.String str4 = item3.name;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -2603,25 +2443,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0667() throws Throwable {
+    public void test0656() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0667");
-        com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 0, 0", (int) (short) 100, (int) (byte) 1);
-        int int4 = item3.sellIn;
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 100 + "'", int4 == 100);
-    }
-
-    @Test
-    public void test0668() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0668");
+            System.out.format("%n%s%n", "RegressionTest1.test0656");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 1, -1, 97", 0, (int) ' ');
     }
 
     @Test
-    public void test0669() throws Throwable {
+    public void test0657() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0669");
+            System.out.format("%n%s%n", "RegressionTest1.test0657");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, 0, 10", 0, (-1));
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -2634,32 +2465,32 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0670() throws Throwable {
+    public void test0658() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0670");
+            System.out.format("%n%s%n", "RegressionTest1.test0658");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 0, 0", 1, (int) (short) -1);
         item3.quality = (short) 10;
         item3.name = "hi!, -1, 52";
     }
 
     @Test
-    public void test0671() throws Throwable {
+    public void test0659() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0671");
+            System.out.format("%n%s%n", "RegressionTest1.test0659");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (-1), (int) '#');
     }
 
     @Test
-    public void test0672() throws Throwable {
+    public void test0660() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0672");
+            System.out.format("%n%s%n", "RegressionTest1.test0660");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 52", (int) (byte) 10, (int) 'a');
     }
 
     @Test
-    public void test0673() throws Throwable {
+    public void test0661() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0673");
+            System.out.format("%n%s%n", "RegressionTest1.test0661");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         int int4 = item3.sellIn;
         int int5 = item3.quality;
@@ -2671,9 +2502,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0674() throws Throwable {
+    public void test0662() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0674");
+            System.out.format("%n%s%n", "RegressionTest1.test0662");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -2693,9 +2524,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0675() throws Throwable {
+    public void test0663() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0675");
+            System.out.format("%n%s%n", "RegressionTest1.test0663");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -2715,24 +2546,24 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0676() throws Throwable {
+    public void test0664() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0676");
+            System.out.format("%n%s%n", "RegressionTest1.test0664");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 1", (int) (byte) 100, (int) (short) 0);
         item3.quality = (byte) 0;
     }
 
     @Test
-    public void test0677() throws Throwable {
+    public void test0665() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0677");
+            System.out.format("%n%s%n", "RegressionTest1.test0665");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 97, 100, 0", 35, (int) (byte) 1);
     }
 
     @Test
-    public void test0678() throws Throwable {
+    public void test0666() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0678");
+            System.out.format("%n%s%n", "RegressionTest1.test0666");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -2750,9 +2581,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0679() throws Throwable {
+    public void test0667() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0679");
+            System.out.format("%n%s%n", "RegressionTest1.test0667");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -2772,9 +2603,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0680() throws Throwable {
+    public void test0668() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0680");
+            System.out.format("%n%s%n", "RegressionTest1.test0668");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 10, -1, 35", (int) (byte) 10, (int) '4');
         int int4 = item3.quality;
         item3.sellIn = (short) 0;
@@ -2782,9 +2613,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0681() throws Throwable {
+    public void test0669() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0681");
+            System.out.format("%n%s%n", "RegressionTest1.test0669");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.quality = '4';
         item3.name = "hi!, 1, 1";
@@ -2796,9 +2627,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0682() throws Throwable {
+    public void test0670() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0682");
+            System.out.format("%n%s%n", "RegressionTest1.test0670");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, 0, 10", 0, (-1));
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -2807,9 +2638,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0683() throws Throwable {
+    public void test0671() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0683");
+            System.out.format("%n%s%n", "RegressionTest1.test0671");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, 52, -1", 97, 10);
         item3.name = "hi!, 10, 0";
         int int6 = item3.sellIn;
@@ -2820,9 +2651,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0684() throws Throwable {
+    public void test0672() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0684");
+            System.out.format("%n%s%n", "RegressionTest1.test0672");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.name = ", 100, 10";
@@ -2833,9 +2664,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0685() throws Throwable {
+    public void test0673() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0685");
+            System.out.format("%n%s%n", "RegressionTest1.test0673");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         int int6 = item3.sellIn;
@@ -2845,9 +2676,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0686() throws Throwable {
+    public void test0674() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0686");
+            System.out.format("%n%s%n", "RegressionTest1.test0674");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", 0, 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -2860,9 +2691,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0687() throws Throwable {
+    public void test0675() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0687");
+            System.out.format("%n%s%n", "RegressionTest1.test0675");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -2881,9 +2712,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0688() throws Throwable {
+    public void test0676() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0688");
+            System.out.format("%n%s%n", "RegressionTest1.test0676");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -2901,9 +2732,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0689() throws Throwable {
+    public void test0677() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0689");
+            System.out.format("%n%s%n", "RegressionTest1.test0677");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -2918,9 +2749,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0690() throws Throwable {
+    public void test0678() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0690");
+            System.out.format("%n%s%n", "RegressionTest1.test0678");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.name;
         item3.quality = (byte) 0;
@@ -2933,9 +2764,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0691() throws Throwable {
+    public void test0679() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0691");
+            System.out.format("%n%s%n", "RegressionTest1.test0679");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -2946,9 +2777,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0692() throws Throwable {
+    public void test0680() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0692");
+            System.out.format("%n%s%n", "RegressionTest1.test0680");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 0, 0", 1, 35);
         java.lang.String str4 = item3.name;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -2959,9 +2790,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0693() throws Throwable {
+    public void test0681() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0693");
+            System.out.format("%n%s%n", "RegressionTest1.test0681");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -2974,9 +2805,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0694() throws Throwable {
+    public void test0682() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0694");
+            System.out.format("%n%s%n", "RegressionTest1.test0682");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.quality = (byte) -1;
@@ -2993,17 +2824,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0695() throws Throwable {
+    public void test0683() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0695");
+            System.out.format("%n%s%n", "RegressionTest1.test0683");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 97", (int) ' ', (int) (short) 100);
         item3.sellIn = (byte) 10;
     }
 
     @Test
-    public void test0696() throws Throwable {
+    public void test0684() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0696");
+            System.out.format("%n%s%n", "RegressionTest1.test0684");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3027,9 +2858,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0697() throws Throwable {
+    public void test0685() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0697");
+            System.out.format("%n%s%n", "RegressionTest1.test0685");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 10", (int) (byte) -1, (int) 'a');
         item3.name = "hi!, 10, 0";
         item3.name = "hi!, -1, 97";
@@ -3040,27 +2871,27 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0698() throws Throwable {
+    public void test0686() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0698");
+            System.out.format("%n%s%n", "RegressionTest1.test0686");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 1, 100, 97", 0, (int) (short) 1);
         java.lang.Class<?> wildcardClass4 = item3.getClass();
         org.junit.Assert.assertNotNull(wildcardClass4);
     }
 
     @Test
-    public void test0699() throws Throwable {
+    public void test0687() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0699");
+            System.out.format("%n%s%n", "RegressionTest1.test0687");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 100, 52", (int) (byte) 0, (int) (byte) 100);
         int int4 = item3.quality;
         org.junit.Assert.assertTrue("'" + int4 + "' != '" + 100 + "'", int4 == 100);
     }
 
     @Test
-    public void test0700() throws Throwable {
+    public void test0688() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0700");
+            System.out.format("%n%s%n", "RegressionTest1.test0688");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.quality = '4';
         item3.name = "hi!, 1, 1";
@@ -3071,9 +2902,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0701() throws Throwable {
+    public void test0689() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0701");
+            System.out.format("%n%s%n", "RegressionTest1.test0689");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -3092,9 +2923,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0702() throws Throwable {
+    public void test0690() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0702");
+            System.out.format("%n%s%n", "RegressionTest1.test0690");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.quality = (byte) -1;
@@ -3108,9 +2939,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0703() throws Throwable {
+    public void test0691() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0703");
+            System.out.format("%n%s%n", "RegressionTest1.test0691");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", 0, 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.quality = 10;
@@ -3118,9 +2949,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0704() throws Throwable {
+    public void test0692() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0704");
+            System.out.format("%n%s%n", "RegressionTest1.test0692");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3140,9 +2971,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0705() throws Throwable {
+    public void test0693() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0705");
+            System.out.format("%n%s%n", "RegressionTest1.test0693");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3158,9 +2989,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0706() throws Throwable {
+    public void test0694() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0706");
+            System.out.format("%n%s%n", "RegressionTest1.test0694");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         int int4 = item3.sellIn;
         java.lang.String str5 = item3.toString();
@@ -3172,9 +3003,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0707() throws Throwable {
+    public void test0695() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0707");
+            System.out.format("%n%s%n", "RegressionTest1.test0695");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3190,9 +3021,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0708() throws Throwable {
+    public void test0696() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0708");
+            System.out.format("%n%s%n", "RegressionTest1.test0696");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 100, (int) (short) 1);
         java.lang.String str4 = item3.toString();
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3202,16 +3033,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0709() throws Throwable {
+    public void test0697() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0709");
+            System.out.format("%n%s%n", "RegressionTest1.test0697");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 100, 0, 0, 35", (int) ' ', (int) (short) 10);
     }
 
     @Test
-    public void test0710() throws Throwable {
+    public void test0698() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0710");
+            System.out.format("%n%s%n", "RegressionTest1.test0698");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3236,9 +3067,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0711() throws Throwable {
+    public void test0699() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0711");
+            System.out.format("%n%s%n", "RegressionTest1.test0699");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 97, 97", (int) (byte) 1, (-1));
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.sellIn = (byte) 10;
@@ -3246,9 +3077,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0712() throws Throwable {
+    public void test0700() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0712");
+            System.out.format("%n%s%n", "RegressionTest1.test0700");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -3271,9 +3102,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0713() throws Throwable {
+    public void test0701() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0713");
+            System.out.format("%n%s%n", "RegressionTest1.test0701");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         java.lang.String str4 = item3.name;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -3287,9 +3118,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0714() throws Throwable {
+    public void test0702() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0714");
+            System.out.format("%n%s%n", "RegressionTest1.test0702");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (byte) -1);
         item3.sellIn = (short) 10;
         java.lang.Class<?> wildcardClass6 = item3.getClass();
@@ -3297,9 +3128,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0715() throws Throwable {
+    public void test0703() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0715");
+            System.out.format("%n%s%n", "RegressionTest1.test0703");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         int int4 = item3.quality;
         item3.quality = 100;
@@ -3313,9 +3144,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0716() throws Throwable {
+    public void test0704() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0716");
+            System.out.format("%n%s%n", "RegressionTest1.test0704");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) (short) 0, (int) '4');
         java.lang.String str4 = item3.name;
         item3.sellIn = (-1);
@@ -3325,9 +3156,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0717() throws Throwable {
+    public void test0705() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0717");
+            System.out.format("%n%s%n", "RegressionTest1.test0705");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -3342,9 +3173,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0718() throws Throwable {
+    public void test0706() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0718");
+            System.out.format("%n%s%n", "RegressionTest1.test0706");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         item3.quality = 0;
         int int6 = item3.quality;
@@ -3354,9 +3185,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0719() throws Throwable {
+    public void test0707() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0719");
+            System.out.format("%n%s%n", "RegressionTest1.test0707");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.name;
         item3.quality = (byte) 0;
@@ -3369,9 +3200,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0720() throws Throwable {
+    public void test0708() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0720");
+            System.out.format("%n%s%n", "RegressionTest1.test0708");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97", 0, (int) (byte) 10);
         int int4 = item3.quality;
         java.lang.String str5 = item3.toString();
@@ -3383,9 +3214,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0721() throws Throwable {
+    public void test0709() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0721");
+            System.out.format("%n%s%n", "RegressionTest1.test0709");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -3399,9 +3230,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0722() throws Throwable {
+    public void test0710() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0722");
+            System.out.format("%n%s%n", "RegressionTest1.test0710");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 52", (int) (byte) 10, (-1));
         int int4 = item3.sellIn;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3417,18 +3248,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0723() throws Throwable {
+    public void test0711() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0723");
+            System.out.format("%n%s%n", "RegressionTest1.test0711");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 97", (-1), (int) (short) 0);
         item3.sellIn = (-1);
         item3.sellIn = 0;
     }
 
     @Test
-    public void test0724() throws Throwable {
+    public void test0712() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0724");
+            System.out.format("%n%s%n", "RegressionTest1.test0712");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 97", 97, (int) (short) 1);
         item3.name = ", 100, 1";
         java.lang.String str6 = item3.name;
@@ -3439,16 +3270,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0725() throws Throwable {
+    public void test0713() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0725");
+            System.out.format("%n%s%n", "RegressionTest1.test0713");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 1, 0, 35", (int) (short) 1, 1);
     }
 
     @Test
-    public void test0726() throws Throwable {
+    public void test0714() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0726");
+            System.out.format("%n%s%n", "RegressionTest1.test0714");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -3464,9 +3295,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0727() throws Throwable {
+    public void test0715() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0727");
+            System.out.format("%n%s%n", "RegressionTest1.test0715");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -3492,17 +3323,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0728() throws Throwable {
+    public void test0716() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0728");
+            System.out.format("%n%s%n", "RegressionTest1.test0716");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 0, 0", 1, 35);
         item3.sellIn = (short) 100;
     }
 
     @Test
-    public void test0729() throws Throwable {
+    public void test0717() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0729");
+            System.out.format("%n%s%n", "RegressionTest1.test0717");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3521,9 +3352,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0730() throws Throwable {
+    public void test0718() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0730");
+            System.out.format("%n%s%n", "RegressionTest1.test0718");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         int int4 = item3.quality;
         item3.quality = (short) 0;
@@ -3533,16 +3364,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0731() throws Throwable {
+    public void test0719() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0731");
+            System.out.format("%n%s%n", "RegressionTest1.test0719");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", 52, 35);
     }
 
     @Test
-    public void test0732() throws Throwable {
+    public void test0720() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0732");
+            System.out.format("%n%s%n", "RegressionTest1.test0720");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -3562,9 +3393,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0733() throws Throwable {
+    public void test0721() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0733");
+            System.out.format("%n%s%n", "RegressionTest1.test0721");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -3583,16 +3414,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0734() throws Throwable {
+    public void test0722() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0734");
+            System.out.format("%n%s%n", "RegressionTest1.test0722");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 32, 100", (int) '#', (int) (byte) -1);
     }
 
     @Test
-    public void test0735() throws Throwable {
+    public void test0723() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0735");
+            System.out.format("%n%s%n", "RegressionTest1.test0723");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.sellIn;
@@ -3604,9 +3435,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0736() throws Throwable {
+    public void test0724() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0736");
+            System.out.format("%n%s%n", "RegressionTest1.test0724");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -3624,9 +3455,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0737() throws Throwable {
+    public void test0725() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0737");
+            System.out.format("%n%s%n", "RegressionTest1.test0725");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.name = "hi!, 52, 97";
@@ -3646,9 +3477,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0738() throws Throwable {
+    public void test0726() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0738");
+            System.out.format("%n%s%n", "RegressionTest1.test0726");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 10", (int) '4', (int) '4');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = conjuredItemUpdater4.update();
@@ -3658,9 +3489,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0739() throws Throwable {
+    public void test0727() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0739");
+            System.out.format("%n%s%n", "RegressionTest1.test0727");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -3673,9 +3504,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0740() throws Throwable {
+    public void test0728() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0740");
+            System.out.format("%n%s%n", "RegressionTest1.test0728");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) 100, (int) 'a');
         int int4 = item3.sellIn;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3685,9 +3516,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0741() throws Throwable {
+    public void test0729() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0741");
+            System.out.format("%n%s%n", "RegressionTest1.test0729");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -3704,9 +3535,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0742() throws Throwable {
+    public void test0730() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0742");
+            System.out.format("%n%s%n", "RegressionTest1.test0730");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (-1));
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -3719,24 +3550,24 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0743() throws Throwable {
+    public void test0731() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0743");
+            System.out.format("%n%s%n", "RegressionTest1.test0731");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 0, 1", 35, (int) (byte) 100);
         item3.name = ", -1, 52, 1, 97";
     }
 
     @Test
-    public void test0744() throws Throwable {
+    public void test0732() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0744");
+            System.out.format("%n%s%n", "RegressionTest1.test0732");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 100, 0, 0, 35", 0, (int) '4');
     }
 
     @Test
-    public void test0745() throws Throwable {
+    public void test0733() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0745");
+            System.out.format("%n%s%n", "RegressionTest1.test0733");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3754,9 +3585,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0746() throws Throwable {
+    public void test0734() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0746");
+            System.out.format("%n%s%n", "RegressionTest1.test0734");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -3776,9 +3607,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0747() throws Throwable {
+    public void test0735() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0747");
+            System.out.format("%n%s%n", "RegressionTest1.test0735");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3800,9 +3631,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0748() throws Throwable {
+    public void test0736() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0748");
+            System.out.format("%n%s%n", "RegressionTest1.test0736");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!, -1, 97";
         int int6 = item3.quality;
@@ -3811,9 +3642,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0749() throws Throwable {
+    public void test0737() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0749");
+            System.out.format("%n%s%n", "RegressionTest1.test0737");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -3828,9 +3659,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0750() throws Throwable {
+    public void test0738() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0750");
+            System.out.format("%n%s%n", "RegressionTest1.test0738");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         java.lang.String str4 = item3.name;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -3842,9 +3673,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0751() throws Throwable {
+    public void test0739() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0751");
+            System.out.format("%n%s%n", "RegressionTest1.test0739");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -3863,9 +3694,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0752() throws Throwable {
+    public void test0740() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0752");
+            System.out.format("%n%s%n", "RegressionTest1.test0740");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) (byte) -1, (int) (short) 1);
         item3.quality = (short) 1;
         int int6 = item3.quality;
@@ -3873,16 +3704,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0753() throws Throwable {
+    public void test0741() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0753");
+            System.out.format("%n%s%n", "RegressionTest1.test0741");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 100, 97", (int) (short) 100, (int) 'a');
     }
 
     @Test
-    public void test0754() throws Throwable {
+    public void test0742() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0754");
+            System.out.format("%n%s%n", "RegressionTest1.test0742");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -3907,9 +3738,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0755() throws Throwable {
+    public void test0743() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0755");
+            System.out.format("%n%s%n", "RegressionTest1.test0743");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (-1));
         int int4 = item3.quality;
         item3.sellIn = 32;
@@ -3921,9 +3752,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0756() throws Throwable {
+    public void test0744() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0756");
+            System.out.format("%n%s%n", "RegressionTest1.test0744");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) 'a', 0);
         item3.sellIn = (byte) 0;
         java.lang.String str6 = item3.name;
@@ -3931,9 +3762,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0757() throws Throwable {
+    public void test0745() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0757");
+            System.out.format("%n%s%n", "RegressionTest1.test0745");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) 'a', 1);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = conjuredItemUpdater4.update();
@@ -3945,9 +3776,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0758() throws Throwable {
+    public void test0746() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0758");
+            System.out.format("%n%s%n", "RegressionTest1.test0746");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         java.lang.String str4 = item3.name;
         item3.name = "hi!, -1, 97, 1, -1";
@@ -3958,18 +3789,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0759() throws Throwable {
+    public void test0747() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0759");
+            System.out.format("%n%s%n", "RegressionTest1.test0747");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, 97, 32", (int) (short) 0, 35);
         item3.sellIn = (byte) 0;
         item3.name = "hi!, 10, 10";
     }
 
     @Test
-    public void test0760() throws Throwable {
+    public void test0748() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0760");
+            System.out.format("%n%s%n", "RegressionTest1.test0748");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (byte) -1);
         int int4 = item3.sellIn;
         int int5 = item3.quality;
@@ -3984,9 +3815,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0761() throws Throwable {
+    public void test0749() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0761");
+            System.out.format("%n%s%n", "RegressionTest1.test0749");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 32, 97", (-1), (int) (short) 10);
         item3.name = "hi!, 1, 97";
         java.lang.String str6 = item3.toString();
@@ -3994,9 +3825,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0762() throws Throwable {
+    public void test0750() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0762");
+            System.out.format("%n%s%n", "RegressionTest1.test0750");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -4016,9 +3847,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0763() throws Throwable {
+    public void test0751() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0763");
+            System.out.format("%n%s%n", "RegressionTest1.test0751");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -4031,9 +3862,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0764() throws Throwable {
+    public void test0752() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0764");
+            System.out.format("%n%s%n", "RegressionTest1.test0752");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (-1), (-1));
         int int4 = item3.quality;
         java.lang.String str5 = item3.toString();
@@ -4042,9 +3873,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0765() throws Throwable {
+    public void test0753() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0765");
+            System.out.format("%n%s%n", "RegressionTest1.test0753");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -4059,9 +3890,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0766() throws Throwable {
+    public void test0754() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0766");
+            System.out.format("%n%s%n", "RegressionTest1.test0754");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -4078,9 +3909,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0767() throws Throwable {
+    public void test0755() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0767");
+            System.out.format("%n%s%n", "RegressionTest1.test0755");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -4101,9 +3932,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0768() throws Throwable {
+    public void test0756() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0768");
+            System.out.format("%n%s%n", "RegressionTest1.test0756");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -4119,9 +3950,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0769() throws Throwable {
+    public void test0757() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0769");
+            System.out.format("%n%s%n", "RegressionTest1.test0757");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97", 32, (int) ' ');
         item3.name = ", 100, 1, 0, -1";
         java.lang.String str6 = item3.toString();
@@ -4129,9 +3960,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0770() throws Throwable {
+    public void test0758() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0770");
+            System.out.format("%n%s%n", "RegressionTest1.test0758");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (-1));
         int int4 = item3.quality;
         int int5 = item3.quality;
@@ -4142,9 +3973,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0771() throws Throwable {
+    public void test0759() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0771");
+            System.out.format("%n%s%n", "RegressionTest1.test0759");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -4164,9 +3995,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0772() throws Throwable {
+    public void test0760() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0772");
+            System.out.format("%n%s%n", "RegressionTest1.test0760");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -4193,9 +4024,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0773() throws Throwable {
+    public void test0761() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0773");
+            System.out.format("%n%s%n", "RegressionTest1.test0761");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -4219,9 +4050,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0774() throws Throwable {
+    public void test0762() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0774");
+            System.out.format("%n%s%n", "RegressionTest1.test0762");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -4236,9 +4067,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0775() throws Throwable {
+    public void test0763() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0775");
+            System.out.format("%n%s%n", "RegressionTest1.test0763");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -4255,9 +4086,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0776() throws Throwable {
+    public void test0764() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0776");
+            System.out.format("%n%s%n", "RegressionTest1.test0764");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -4274,9 +4105,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0777() throws Throwable {
+    public void test0765() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0777");
+            System.out.format("%n%s%n", "RegressionTest1.test0765");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         java.lang.String str4 = item3.name;
         item3.name = "hi!, -1, 97, 1, -1";
@@ -4288,9 +4119,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0778() throws Throwable {
+    public void test0766() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0778");
+            System.out.format("%n%s%n", "RegressionTest1.test0766");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) (byte) -1, (int) (short) 1);
         item3.name = "hi!, -1, 0";
         item3.name = "hi!, 52, 97, -1, 52, 10, 97";
@@ -4300,9 +4131,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0779() throws Throwable {
+    public void test0767() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0779");
+            System.out.format("%n%s%n", "RegressionTest1.test0767");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -4317,22 +4148,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0780() throws Throwable {
+    public void test0768() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0780");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (-1));
-        int int4 = item3.quality;
-        int int5 = item3.quality;
-        int int6 = item3.quality;
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
-        org.junit.Assert.assertTrue("'" + int5 + "' != '" + (-1) + "'", int5 == (-1));
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
-    }
-
-    @Test
-    public void test0781() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0781");
+            System.out.format("%n%s%n", "RegressionTest1.test0768");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (byte) -1);
         int int4 = item3.sellIn;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -4344,16 +4162,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0782() throws Throwable {
+    public void test0769() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0782");
+            System.out.format("%n%s%n", "RegressionTest1.test0769");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 1", (int) (short) 10, 10);
     }
 
     @Test
-    public void test0783() throws Throwable {
+    public void test0770() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0783");
+            System.out.format("%n%s%n", "RegressionTest1.test0770");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -4372,9 +4190,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0784() throws Throwable {
+    public void test0771() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0784");
+            System.out.format("%n%s%n", "RegressionTest1.test0771");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -4391,9 +4209,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0785() throws Throwable {
+    public void test0772() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0785");
+            System.out.format("%n%s%n", "RegressionTest1.test0772");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         java.lang.String str4 = item3.name;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -4403,9 +4221,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0786() throws Throwable {
+    public void test0773() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0786");
+            System.out.format("%n%s%n", "RegressionTest1.test0773");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -4423,25 +4241,25 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0787() throws Throwable {
+    public void test0774() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0787");
+            System.out.format("%n%s%n", "RegressionTest1.test0774");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 97, -1, 10", 100, (int) 'a');
     }
 
     @Test
-    public void test0788() throws Throwable {
+    public void test0775() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0788");
+            System.out.format("%n%s%n", "RegressionTest1.test0775");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 97, 100, 0", (int) 'a', 100);
         java.lang.String str4 = item3.toString();
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, 100, 97, 100, 0, 97, 100" + "'", str4, "hi!, 100, 97, 100, 0, 97, 100");
     }
 
     @Test
-    public void test0789() throws Throwable {
+    public void test0776() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0789");
+            System.out.format("%n%s%n", "RegressionTest1.test0776");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) 'a', (int) (short) 1);
         item3.name = "hi!, -1, 10, 52, 0";
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater6 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -4454,18 +4272,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0790() throws Throwable {
+    public void test0777() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0790");
+            System.out.format("%n%s%n", "RegressionTest1.test0777");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 10", 52, (int) (short) 1);
         java.lang.String str4 = item3.name;
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, 100, 10" + "'", str4, "hi!, 100, 10");
     }
 
     @Test
-    public void test0791() throws Throwable {
+    public void test0778() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0791");
+            System.out.format("%n%s%n", "RegressionTest1.test0778");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -4485,9 +4303,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0792() throws Throwable {
+    public void test0779() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0792");
+            System.out.format("%n%s%n", "RegressionTest1.test0779");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         java.lang.String str5 = item3.name;
@@ -4499,9 +4317,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0793() throws Throwable {
+    public void test0780() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0793");
+            System.out.format("%n%s%n", "RegressionTest1.test0780");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -4514,9 +4332,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0794() throws Throwable {
+    public void test0781() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0794");
+            System.out.format("%n%s%n", "RegressionTest1.test0781");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", 100, (int) (short) 0);
         java.lang.String str4 = item3.name;
         int int5 = item3.quality;
@@ -4525,9 +4343,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0795() throws Throwable {
+    public void test0782() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0795");
+            System.out.format("%n%s%n", "RegressionTest1.test0782");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -4547,9 +4365,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0796() throws Throwable {
+    public void test0783() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0796");
+            System.out.format("%n%s%n", "RegressionTest1.test0783");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -4565,9 +4383,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0797() throws Throwable {
+    public void test0784() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0797");
+            System.out.format("%n%s%n", "RegressionTest1.test0784");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -4580,9 +4398,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0798() throws Throwable {
+    public void test0785() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0798");
+            System.out.format("%n%s%n", "RegressionTest1.test0785");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -4600,9 +4418,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0799() throws Throwable {
+    public void test0786() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0799");
+            System.out.format("%n%s%n", "RegressionTest1.test0786");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 0, 0", 1, 35);
         java.lang.String str4 = item3.name;
         item3.name = "hi!, -1, 97, 1, 52";
@@ -4610,9 +4428,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0800() throws Throwable {
+    public void test0787() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0800");
+            System.out.format("%n%s%n", "RegressionTest1.test0787");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) (short) 100, (int) (short) 1);
         java.lang.String str4 = item3.name;
         item3.quality = (short) -1;
@@ -4625,25 +4443,25 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0801() throws Throwable {
+    public void test0788() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0801");
+            System.out.format("%n%s%n", "RegressionTest1.test0788");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 0, 0", 1, 35);
         item3.sellIn = '#';
     }
 
     @Test
-    public void test0802() throws Throwable {
+    public void test0789() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0802");
+            System.out.format("%n%s%n", "RegressionTest1.test0789");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1, 32, 97", 52, 10);
         item3.quality = (byte) 100;
     }
 
     @Test
-    public void test0803() throws Throwable {
+    public void test0790() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0803");
+            System.out.format("%n%s%n", "RegressionTest1.test0790");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -4659,16 +4477,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0804() throws Throwable {
+    public void test0791() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0804");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 0, 0", (int) 'a', (int) (short) 0);
-    }
-
-    @Test
-    public void test0805() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0805");
+            System.out.format("%n%s%n", "RegressionTest1.test0791");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         int int5 = item3.sellIn;
@@ -4680,9 +4491,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0806() throws Throwable {
+    public void test0792() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0806");
+            System.out.format("%n%s%n", "RegressionTest1.test0792");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -4698,24 +4509,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0807() throws Throwable {
+    public void test0793() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0807");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
-        item3.name = "hi!";
-        item3.sellIn = '4';
-        java.lang.String str8 = item3.name;
-        item3.quality = (byte) 10;
-        java.lang.String str11 = item3.toString();
-        item3.name = "hi!, 52, 97, 97, 32";
-        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
-        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!, 52, 10" + "'", str11, "hi!, 52, 10");
-    }
-
-    @Test
-    public void test0808() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0808");
+            System.out.format("%n%s%n", "RegressionTest1.test0793");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) 0, (int) (short) 1);
         item3.quality = (byte) 10;
         java.lang.Class<?> wildcardClass6 = item3.getClass();
@@ -4723,9 +4519,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0809() throws Throwable {
+    public void test0794() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0809");
+            System.out.format("%n%s%n", "RegressionTest1.test0794");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -4743,9 +4539,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0810() throws Throwable {
+    public void test0795() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0810");
+            System.out.format("%n%s%n", "RegressionTest1.test0795");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) 'a', 1);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = conjuredItemUpdater4.update();
@@ -4757,9 +4553,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0811() throws Throwable {
+    public void test0796() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0811");
+            System.out.format("%n%s%n", "RegressionTest1.test0796");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -4776,9 +4572,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0812() throws Throwable {
+    public void test0797() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0812");
+            System.out.format("%n%s%n", "RegressionTest1.test0797");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -4795,9 +4591,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0813() throws Throwable {
+    public void test0798() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0813");
+            System.out.format("%n%s%n", "RegressionTest1.test0798");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -4821,9 +4617,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0814() throws Throwable {
+    public void test0799() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0814");
+            System.out.format("%n%s%n", "RegressionTest1.test0799");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -4846,16 +4642,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0815() throws Throwable {
+    public void test0800() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0815");
+            System.out.format("%n%s%n", "RegressionTest1.test0800");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 1, -1, 97", 32, (int) 'a');
     }
 
     @Test
-    public void test0816() throws Throwable {
+    public void test0801() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0816");
+            System.out.format("%n%s%n", "RegressionTest1.test0801");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -4872,9 +4668,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0817() throws Throwable {
+    public void test0802() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0817");
+            System.out.format("%n%s%n", "RegressionTest1.test0802");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) (byte) -1, (int) (short) 1);
         int int4 = item3.quality;
         item3.sellIn = 0;
@@ -4884,9 +4680,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0818() throws Throwable {
+    public void test0803() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0818");
+            System.out.format("%n%s%n", "RegressionTest1.test0803");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -4909,9 +4705,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0819() throws Throwable {
+    public void test0804() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0819");
+            System.out.format("%n%s%n", "RegressionTest1.test0804");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.name;
         item3.quality = (byte) 0;
@@ -4927,17 +4723,17 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0820() throws Throwable {
+    public void test0805() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0820");
+            System.out.format("%n%s%n", "RegressionTest1.test0805");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 100, 0", (int) (short) 0, 1);
         item3.quality = (short) 1;
     }
 
     @Test
-    public void test0821() throws Throwable {
+    public void test0806() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0821");
+            System.out.format("%n%s%n", "RegressionTest1.test0806");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -4959,9 +4755,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0822() throws Throwable {
+    public void test0807() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0822");
+            System.out.format("%n%s%n", "RegressionTest1.test0807");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", 100, (int) (short) 0);
         java.lang.String str4 = item3.name;
         item3.quality = 0;
@@ -4973,9 +4769,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0823() throws Throwable {
+    public void test0808() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0823");
+            System.out.format("%n%s%n", "RegressionTest1.test0808");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 10", (int) (byte) -1, (int) 'a');
         item3.name = "hi!, 10, 0";
         java.lang.String str6 = item3.name;
@@ -4988,9 +4784,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0824() throws Throwable {
+    public void test0809() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0824");
+            System.out.format("%n%s%n", "RegressionTest1.test0809");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -5010,9 +4806,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0825() throws Throwable {
+    public void test0810() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0825");
+            System.out.format("%n%s%n", "RegressionTest1.test0810");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!, -1, 97";
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -5026,9 +4822,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0826() throws Throwable {
+    public void test0811() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0826");
+            System.out.format("%n%s%n", "RegressionTest1.test0811");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -5051,9 +4847,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0827() throws Throwable {
+    public void test0812() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0827");
+            System.out.format("%n%s%n", "RegressionTest1.test0812");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 100, (int) (short) 1);
         item3.name = ", -1, 52";
         item3.sellIn = 35;
@@ -5062,9 +4858,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0828() throws Throwable {
+    public void test0813() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0828");
+            System.out.format("%n%s%n", "RegressionTest1.test0813");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, 97, 32", (int) (short) 0, 35);
         item3.sellIn = (byte) 0;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -5072,9 +4868,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0829() throws Throwable {
+    public void test0814() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0829");
+            System.out.format("%n%s%n", "RegressionTest1.test0814");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5091,9 +4887,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0830() throws Throwable {
+    public void test0815() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0830");
+            System.out.format("%n%s%n", "RegressionTest1.test0815");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         int int4 = item3.sellIn;
         int int5 = item3.sellIn;
@@ -5111,9 +4907,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0831() throws Throwable {
+    public void test0816() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0831");
+            System.out.format("%n%s%n", "RegressionTest1.test0816");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         item3.sellIn = (byte) 100;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater6 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5124,9 +4920,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0832() throws Throwable {
+    public void test0817() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0832");
+            System.out.format("%n%s%n", "RegressionTest1.test0817");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -5140,9 +4936,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0833() throws Throwable {
+    public void test0818() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0833");
+            System.out.format("%n%s%n", "RegressionTest1.test0818");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         java.lang.String str4 = item3.name;
         item3.sellIn = 100;
@@ -5156,9 +4952,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0834() throws Throwable {
+    public void test0819() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0834");
+            System.out.format("%n%s%n", "RegressionTest1.test0819");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) 'a', 1);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         java.lang.String str5 = item3.name;
@@ -5167,9 +4963,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0835() throws Throwable {
+    public void test0820() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0835");
+            System.out.format("%n%s%n", "RegressionTest1.test0820");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -5186,9 +4982,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0836() throws Throwable {
+    public void test0821() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0836");
+            System.out.format("%n%s%n", "RegressionTest1.test0821");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -5205,9 +5001,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0837() throws Throwable {
+    public void test0822() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0837");
+            System.out.format("%n%s%n", "RegressionTest1.test0822");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -5227,9 +5023,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0838() throws Throwable {
+    public void test0823() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0838");
+            System.out.format("%n%s%n", "RegressionTest1.test0823");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) 1, (-1));
         java.lang.String str4 = item3.toString();
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5239,9 +5035,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0839() throws Throwable {
+    public void test0824() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0839");
+            System.out.format("%n%s%n", "RegressionTest1.test0824");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -5254,9 +5050,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0840() throws Throwable {
+    public void test0825() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0840");
+            System.out.format("%n%s%n", "RegressionTest1.test0825");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -5274,18 +5070,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0841() throws Throwable {
+    public void test0826() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0841");
+            System.out.format("%n%s%n", "RegressionTest1.test0826");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 97", (int) (byte) 1, (int) (byte) 0);
         java.lang.String str4 = item3.toString();
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ", -1, 97, 1, 0" + "'", str4, ", -1, 97, 1, 0");
     }
 
     @Test
-    public void test0842() throws Throwable {
+    public void test0827() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0842");
+            System.out.format("%n%s%n", "RegressionTest1.test0827");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 10", (-1), 100);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         java.lang.Class<?> wildcardClass5 = item3.getClass();
@@ -5293,9 +5089,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0843() throws Throwable {
+    public void test0828() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0843");
+            System.out.format("%n%s%n", "RegressionTest1.test0828");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -5311,9 +5107,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0844() throws Throwable {
+    public void test0829() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0844");
+            System.out.format("%n%s%n", "RegressionTest1.test0829");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5335,18 +5131,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0845() throws Throwable {
+    public void test0830() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0845");
+            System.out.format("%n%s%n", "RegressionTest1.test0830");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 10", (int) (short) 1, 35);
         item3.name = "hi!, -1, 97, 1, -1, 32, 97";
         item3.name = "";
     }
 
     @Test
-    public void test0846() throws Throwable {
+    public void test0831() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0846");
+            System.out.format("%n%s%n", "RegressionTest1.test0831");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) (short) 100, (int) (short) 1);
         item3.name = ", 100, 1";
         item3.name = "hi!, 1, 1";
@@ -5355,16 +5151,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0847() throws Throwable {
+    public void test0832() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0847");
+            System.out.format("%n%s%n", "RegressionTest1.test0832");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, -1, -1", 35, 52);
     }
 
     @Test
-    public void test0848() throws Throwable {
+    public void test0833() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0848");
+            System.out.format("%n%s%n", "RegressionTest1.test0833");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) -1, (int) (byte) 10);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         item3.sellIn = 'a';
@@ -5372,9 +5168,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0849() throws Throwable {
+    public void test0834() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0849");
+            System.out.format("%n%s%n", "RegressionTest1.test0834");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, -1, 52", (int) (byte) 10, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = itemUpdater4.update();
@@ -5383,9 +5179,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0850() throws Throwable {
+    public void test0835() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0850");
+            System.out.format("%n%s%n", "RegressionTest1.test0835");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -5406,9 +5202,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0851() throws Throwable {
+    public void test0836() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0851");
+            System.out.format("%n%s%n", "RegressionTest1.test0836");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         java.lang.String str4 = item3.name;
         int int5 = item3.sellIn;
@@ -5424,9 +5220,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0852() throws Throwable {
+    public void test0837() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0852");
+            System.out.format("%n%s%n", "RegressionTest1.test0837");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         java.lang.String str4 = item3.toString();
         int int5 = item3.sellIn;
@@ -5440,9 +5236,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0853() throws Throwable {
+    public void test0838() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0853");
+            System.out.format("%n%s%n", "RegressionTest1.test0838");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5456,9 +5252,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0854() throws Throwable {
+    public void test0839() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0854");
+            System.out.format("%n%s%n", "RegressionTest1.test0839");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (short) 10);
         item3.name = ", 100, 1, 10, 52";
         int int6 = item3.sellIn;
@@ -5467,9 +5263,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0855() throws Throwable {
+    public void test0840() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0855");
+            System.out.format("%n%s%n", "RegressionTest1.test0840");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -5483,9 +5279,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0856() throws Throwable {
+    public void test0841() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0856");
+            System.out.format("%n%s%n", "RegressionTest1.test0841");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 0, 35);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         java.lang.Class<?> wildcardClass5 = itemUpdater4.getClass();
@@ -5494,9 +5290,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0857() throws Throwable {
+    public void test0842() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0857");
+            System.out.format("%n%s%n", "RegressionTest1.test0842");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -5524,9 +5320,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0858() throws Throwable {
+    public void test0843() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0858");
+            System.out.format("%n%s%n", "RegressionTest1.test0843");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -5547,9 +5343,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0859() throws Throwable {
+    public void test0844() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0859");
+            System.out.format("%n%s%n", "RegressionTest1.test0844");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (-1));
         int int4 = item3.quality;
         item3.quality = 52;
@@ -5560,35 +5356,35 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0860() throws Throwable {
+    public void test0845() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0860");
+            System.out.format("%n%s%n", "RegressionTest1.test0845");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 97, 10, 1", 35, (int) (byte) 0);
         int int4 = item3.sellIn;
         org.junit.Assert.assertTrue("'" + int4 + "' != '" + 35 + "'", int4 == 35);
     }
 
     @Test
-    public void test0861() throws Throwable {
+    public void test0846() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0861");
+            System.out.format("%n%s%n", "RegressionTest1.test0846");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 32, 97", (int) 'a', (int) (byte) 100);
         item3.name = ", 100, 1, 0, 0, 0, 10";
     }
 
     @Test
-    public void test0862() throws Throwable {
+    public void test0847() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0862");
+            System.out.format("%n%s%n", "RegressionTest1.test0847");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 0, 1", (int) ' ', (int) 'a');
         item3.sellIn = (byte) -1;
         item3.name = ", 100, 1, 0, -1, 32, 32";
     }
 
     @Test
-    public void test0863() throws Throwable {
+    public void test0848() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0863");
+            System.out.format("%n%s%n", "RegressionTest1.test0848");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 52, 0", 97, 100);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         java.lang.Class<?> wildcardClass5 = item3.getClass();
@@ -5597,9 +5393,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0864() throws Throwable {
+    public void test0849() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0864");
+            System.out.format("%n%s%n", "RegressionTest1.test0849");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) 10, 100);
         int int4 = item3.quality;
         java.lang.String str5 = item3.toString();
@@ -5610,9 +5406,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0865() throws Throwable {
+    public void test0850() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0865");
+            System.out.format("%n%s%n", "RegressionTest1.test0850");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -5630,16 +5426,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0866() throws Throwable {
+    public void test0851() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0866");
+            System.out.format("%n%s%n", "RegressionTest1.test0851");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 97", (int) 'a', (-1));
     }
 
     @Test
-    public void test0867() throws Throwable {
+    public void test0852() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0867");
+            System.out.format("%n%s%n", "RegressionTest1.test0852");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -5654,9 +5450,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0868() throws Throwable {
+    public void test0853() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0868");
+            System.out.format("%n%s%n", "RegressionTest1.test0853");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -5673,9 +5469,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0869() throws Throwable {
+    public void test0854() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0869");
+            System.out.format("%n%s%n", "RegressionTest1.test0854");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -5691,18 +5487,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0870() throws Throwable {
+    public void test0855() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0870");
+            System.out.format("%n%s%n", "RegressionTest1.test0855");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, -1, 52, 10, 97", 52, (int) (short) 10);
         int int4 = item3.quality;
         org.junit.Assert.assertTrue("'" + int4 + "' != '" + 10 + "'", int4 == 10);
     }
 
     @Test
-    public void test0871() throws Throwable {
+    public void test0856() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0871");
+            System.out.format("%n%s%n", "RegressionTest1.test0856");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5715,9 +5511,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0872() throws Throwable {
+    public void test0857() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0872");
+            System.out.format("%n%s%n", "RegressionTest1.test0857");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -5736,9 +5532,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0873() throws Throwable {
+    public void test0858() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0873");
+            System.out.format("%n%s%n", "RegressionTest1.test0858");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         java.lang.String str4 = item3.name;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -5752,9 +5548,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0874() throws Throwable {
+    public void test0859() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0874");
+            System.out.format("%n%s%n", "RegressionTest1.test0859");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 100, (int) (short) 1);
         java.lang.String str4 = item3.toString();
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5765,9 +5561,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0875() throws Throwable {
+    public void test0860() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0875");
+            System.out.format("%n%s%n", "RegressionTest1.test0860");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.sellIn;
@@ -5779,9 +5575,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0876() throws Throwable {
+    public void test0861() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0876");
+            System.out.format("%n%s%n", "RegressionTest1.test0861");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5794,9 +5590,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0877() throws Throwable {
+    public void test0862() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0877");
+            System.out.format("%n%s%n", "RegressionTest1.test0862");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 0", (int) '#', 32);
         item3.sellIn = '#';
         java.lang.Class<?> wildcardClass6 = item3.getClass();
@@ -5804,9 +5600,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0878() throws Throwable {
+    public void test0863() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0878");
+            System.out.format("%n%s%n", "RegressionTest1.test0863");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -5828,9 +5624,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0879() throws Throwable {
+    public void test0864() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0879");
+            System.out.format("%n%s%n", "RegressionTest1.test0864");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -5846,9 +5642,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0880() throws Throwable {
+    public void test0865() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0880");
+            System.out.format("%n%s%n", "RegressionTest1.test0865");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         java.lang.String str4 = item3.toString();
         item3.quality = (short) -1;
@@ -5859,9 +5655,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0881() throws Throwable {
+    public void test0866() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0881");
+            System.out.format("%n%s%n", "RegressionTest1.test0866");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97", (int) (short) 1, 32);
         java.lang.String str4 = item3.name;
         item3.name = ", 100, 1, 0, 0";
@@ -5873,9 +5669,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0882() throws Throwable {
+    public void test0867() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0882");
+            System.out.format("%n%s%n", "RegressionTest1.test0867");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!, -1, 97";
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -5885,9 +5681,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0883() throws Throwable {
+    public void test0868() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0883");
+            System.out.format("%n%s%n", "RegressionTest1.test0868");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -5906,9 +5702,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0884() throws Throwable {
+    public void test0869() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0884");
+            System.out.format("%n%s%n", "RegressionTest1.test0869");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 100, (int) (short) 1);
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -5920,16 +5716,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0885() throws Throwable {
+    public void test0870() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0885");
+            System.out.format("%n%s%n", "RegressionTest1.test0870");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 97, 100, 0, 97, 100", 32, (int) (short) 10);
     }
 
     @Test
-    public void test0886() throws Throwable {
+    public void test0871() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0886");
+            System.out.format("%n%s%n", "RegressionTest1.test0871");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -5946,16 +5742,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0887() throws Throwable {
+    public void test0872() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0887");
+            System.out.format("%n%s%n", "RegressionTest1.test0872");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 32, 100", 35, (int) ' ');
     }
 
     @Test
-    public void test0888() throws Throwable {
+    public void test0873() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0888");
+            System.out.format("%n%s%n", "RegressionTest1.test0873");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -5970,9 +5766,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0889() throws Throwable {
+    public void test0874() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0889");
+            System.out.format("%n%s%n", "RegressionTest1.test0874");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         int int4 = item3.sellIn;
         java.lang.String str5 = item3.toString();
@@ -5983,9 +5779,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0890() throws Throwable {
+    public void test0875() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0890");
+            System.out.format("%n%s%n", "RegressionTest1.test0875");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", 100, (int) (short) 0);
         java.lang.String str4 = item3.name;
         java.lang.String str5 = item3.name;
@@ -5996,9 +5792,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0891() throws Throwable {
+    public void test0876() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0891");
+            System.out.format("%n%s%n", "RegressionTest1.test0876");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.name = "hi!, 52, 97";
@@ -6011,9 +5807,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0892() throws Throwable {
+    public void test0877() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0892");
+            System.out.format("%n%s%n", "RegressionTest1.test0877");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", 100, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.quality = 0;
@@ -6023,9 +5819,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0893() throws Throwable {
+    public void test0878() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0893");
+            System.out.format("%n%s%n", "RegressionTest1.test0878");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -6041,16 +5837,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0894() throws Throwable {
+    public void test0879() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0894");
+            System.out.format("%n%s%n", "RegressionTest1.test0879");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 97, 1, 0", (-1), (int) '#');
     }
 
     @Test
-    public void test0895() throws Throwable {
+    public void test0880() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0895");
+            System.out.format("%n%s%n", "RegressionTest1.test0880");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -6066,9 +5862,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0896() throws Throwable {
+    public void test0881() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0896");
+            System.out.format("%n%s%n", "RegressionTest1.test0881");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -6089,9 +5885,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0897() throws Throwable {
+    public void test0882() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0897");
+            System.out.format("%n%s%n", "RegressionTest1.test0882");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -6111,9 +5907,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0898() throws Throwable {
+    public void test0883() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0898");
+            System.out.format("%n%s%n", "RegressionTest1.test0883");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6125,9 +5921,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0899() throws Throwable {
+    public void test0884() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0899");
+            System.out.format("%n%s%n", "RegressionTest1.test0884");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.sellIn;
@@ -6145,9 +5941,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0900() throws Throwable {
+    public void test0885() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0900");
+            System.out.format("%n%s%n", "RegressionTest1.test0885");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6161,9 +5957,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0901() throws Throwable {
+    public void test0886() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0901");
+            System.out.format("%n%s%n", "RegressionTest1.test0886");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) 1, (-1));
         int int4 = item3.quality;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6176,9 +5972,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0902() throws Throwable {
+    public void test0887() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0902");
+            System.out.format("%n%s%n", "RegressionTest1.test0887");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!, -1, 97";
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -6190,9 +5986,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0903() throws Throwable {
+    public void test0888() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0903");
+            System.out.format("%n%s%n", "RegressionTest1.test0888");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.sellIn;
@@ -6207,9 +6003,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0904() throws Throwable {
+    public void test0889() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0904");
+            System.out.format("%n%s%n", "RegressionTest1.test0889");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6221,20 +6017,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0905() throws Throwable {
+    public void test0890() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0905");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", (int) (byte) 1, (-1));
-        java.lang.String str4 = item3.toString();
-        item3.quality = '4';
-        item3.quality = 97;
-        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, -1, 97, 1, -1" + "'", str4, "hi!, -1, 97, 1, -1");
-    }
-
-    @Test
-    public void test0906() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0906");
+            System.out.format("%n%s%n", "RegressionTest1.test0890");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6251,9 +6036,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0907() throws Throwable {
+    public void test0891() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0907");
+            System.out.format("%n%s%n", "RegressionTest1.test0891");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -6271,16 +6056,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0908() throws Throwable {
+    public void test0892() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0908");
+            System.out.format("%n%s%n", "RegressionTest1.test0892");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 32, 100", 52, 52);
     }
 
     @Test
-    public void test0909() throws Throwable {
+    public void test0893() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0909");
+            System.out.format("%n%s%n", "RegressionTest1.test0893");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         item3.name = "hi!, -1, 0";
         item3.sellIn = (byte) 0;
@@ -6291,20 +6076,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0910() throws Throwable {
+    public void test0894() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0910");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 10, 1, 10", (int) (short) 10, (int) (byte) -1);
-        java.lang.String str4 = item3.name;
-        int int5 = item3.quality;
-        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, 52, 10, 1, 10" + "'", str4, "hi!, 52, 10, 1, 10");
-        org.junit.Assert.assertTrue("'" + int5 + "' != '" + (-1) + "'", int5 == (-1));
-    }
-
-    @Test
-    public void test0911() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0911");
+            System.out.format("%n%s%n", "RegressionTest1.test0894");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.sellIn = (short) 0;
@@ -6315,43 +6089,23 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0912() throws Throwable {
+    public void test0895() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0912");
+            System.out.format("%n%s%n", "RegressionTest1.test0895");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 10, 1, 35", (int) (short) 10, 97);
     }
 
     @Test
-    public void test0913() throws Throwable {
+    public void test0896() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0913");
+            System.out.format("%n%s%n", "RegressionTest1.test0896");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 10, -1, 1, 97", 10, (-1));
     }
 
     @Test
-    public void test0914() throws Throwable {
+    public void test0897() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0914");
-        com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
-        int int4 = item3.quality;
-        item3.quality = (byte) -1;
-        java.lang.String str7 = item3.name;
-        int int8 = item3.sellIn;
-        item3.sellIn = 'a';
-        int int11 = item3.sellIn;
-        item3.name = "hi!, 52, 97, -1, 1";
-        com.gildedrose.ItemUpdater itemUpdater14 = com.gildedrose.ItemUpdater.getInstance(item3);
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-        org.junit.Assert.assertEquals("'" + str7 + "' != '" + ", 100, 1" + "'", str7, ", 100, 1");
-        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 10 + "'", int8 == 10);
-        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 97 + "'", int11 == 97);
-        org.junit.Assert.assertNotNull(itemUpdater14);
-    }
-
-    @Test
-    public void test0915() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0915");
+            System.out.format("%n%s%n", "RegressionTest1.test0897");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -6369,9 +6123,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0916() throws Throwable {
+    public void test0898() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0916");
+            System.out.format("%n%s%n", "RegressionTest1.test0898");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", 10, 0);
         item3.quality = (-1);
         java.lang.String str6 = item3.toString();
@@ -6379,9 +6133,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0917() throws Throwable {
+    public void test0899() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0917");
+            System.out.format("%n%s%n", "RegressionTest1.test0899");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", 10, 32);
         java.lang.String str4 = item3.name;
         java.lang.String str5 = item3.name;
@@ -6390,18 +6144,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0918() throws Throwable {
+    public void test0900() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0918");
+            System.out.format("%n%s%n", "RegressionTest1.test0900");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 0, 10", 0, 52);
         int int4 = item3.quality;
         org.junit.Assert.assertTrue("'" + int4 + "' != '" + 52 + "'", int4 == 52);
     }
 
     @Test
-    public void test0919() throws Throwable {
+    public void test0901() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0919");
+            System.out.format("%n%s%n", "RegressionTest1.test0901");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (byte) -1);
         int int4 = item3.sellIn;
         java.lang.String str5 = item3.name;
@@ -6421,9 +6175,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0920() throws Throwable {
+    public void test0902() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0920");
+            System.out.format("%n%s%n", "RegressionTest1.test0902");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 100, (int) (short) 1);
         item3.sellIn = (short) 100;
         int int6 = item3.quality;
@@ -6435,9 +6189,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0921() throws Throwable {
+    public void test0903() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0921");
+            System.out.format("%n%s%n", "RegressionTest1.test0903");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         item3.name = "hi!, -1, 0";
         item3.sellIn = 0;
@@ -6446,9 +6200,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0922() throws Throwable {
+    public void test0904() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0922");
+            System.out.format("%n%s%n", "RegressionTest1.test0904");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -6461,9 +6215,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0923() throws Throwable {
+    public void test0905() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0923");
+            System.out.format("%n%s%n", "RegressionTest1.test0905");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97", 100, (int) (short) 0);
         item3.sellIn = 100;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -6474,9 +6228,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0924() throws Throwable {
+    public void test0906() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0924");
+            System.out.format("%n%s%n", "RegressionTest1.test0906");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) (byte) -1, (int) (short) 1);
         item3.name = "hi!, -1, 0";
         item3.name = "hi!, 52, 97, -1, 52, 10, 97";
@@ -6486,9 +6240,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0925() throws Throwable {
+    public void test0907() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0925");
+            System.out.format("%n%s%n", "RegressionTest1.test0907");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6508,9 +6262,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0926() throws Throwable {
+    public void test0908() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0926");
+            System.out.format("%n%s%n", "RegressionTest1.test0908");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         int int4 = item3.quality;
         item3.quality = 100;
@@ -6521,9 +6275,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0927() throws Throwable {
+    public void test0909() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0927");
+            System.out.format("%n%s%n", "RegressionTest1.test0909");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -6539,9 +6293,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0928() throws Throwable {
+    public void test0910() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0928");
+            System.out.format("%n%s%n", "RegressionTest1.test0910");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) 'a', (int) (short) 1);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         item3.sellIn = (byte) 0;
@@ -6549,9 +6303,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0929() throws Throwable {
+    public void test0911() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0929");
+            System.out.format("%n%s%n", "RegressionTest1.test0911");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -6568,9 +6322,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0930() throws Throwable {
+    public void test0912() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0930");
+            System.out.format("%n%s%n", "RegressionTest1.test0912");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.quality;
@@ -6582,18 +6336,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0931() throws Throwable {
+    public void test0913() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0931");
+            System.out.format("%n%s%n", "RegressionTest1.test0913");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) (short) 0, (int) '#');
         java.lang.String str4 = item3.toString();
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, -1, 10, 0, 35" + "'", str4, "hi!, -1, 10, 0, 35");
     }
 
     @Test
-    public void test0932() throws Throwable {
+    public void test0914() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0932");
+            System.out.format("%n%s%n", "RegressionTest1.test0914");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -6608,9 +6362,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0933() throws Throwable {
+    public void test0915() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0933");
+            System.out.format("%n%s%n", "RegressionTest1.test0915");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.quality;
         item3.quality = (byte) -1;
@@ -6626,16 +6380,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0934() throws Throwable {
+    public void test0916() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0934");
+            System.out.format("%n%s%n", "RegressionTest1.test0916");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 10, 1, 10", (int) '#', 97);
     }
 
     @Test
-    public void test0935() throws Throwable {
+    public void test0917() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0935");
+            System.out.format("%n%s%n", "RegressionTest1.test0917");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6653,9 +6407,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0936() throws Throwable {
+    public void test0918() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0936");
+            System.out.format("%n%s%n", "RegressionTest1.test0918");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6675,9 +6429,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0937() throws Throwable {
+    public void test0919() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0937");
+            System.out.format("%n%s%n", "RegressionTest1.test0919");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 97, 1", (int) 'a', (int) (short) 100);
         int int4 = item3.quality;
         java.lang.String str5 = item3.name;
@@ -6688,9 +6442,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0938() throws Throwable {
+    public void test0920() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0938");
+            System.out.format("%n%s%n", "RegressionTest1.test0920");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = itemUpdater4.update();
@@ -6703,9 +6457,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0939() throws Throwable {
+    public void test0921() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0939");
+            System.out.format("%n%s%n", "RegressionTest1.test0921");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -6723,9 +6477,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0940() throws Throwable {
+    public void test0922() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0940");
+            System.out.format("%n%s%n", "RegressionTest1.test0922");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -6748,9 +6502,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0941() throws Throwable {
+    public void test0923() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0941");
+            System.out.format("%n%s%n", "RegressionTest1.test0923");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -6770,16 +6524,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0942() throws Throwable {
+    public void test0924() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0942");
+            System.out.format("%n%s%n", "RegressionTest1.test0924");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 0", (int) (byte) -1, (int) (byte) -1);
     }
 
     @Test
-    public void test0943() throws Throwable {
+    public void test0925() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0943");
+            System.out.format("%n%s%n", "RegressionTest1.test0925");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -6797,9 +6551,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0944() throws Throwable {
+    public void test0926() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0944");
+            System.out.format("%n%s%n", "RegressionTest1.test0926");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -6814,9 +6568,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0945() throws Throwable {
+    public void test0927() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0945");
+            System.out.format("%n%s%n", "RegressionTest1.test0927");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         int int4 = item3.quality;
         item3.quality = 100;
@@ -6826,9 +6580,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0946() throws Throwable {
+    public void test0928() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0946");
+            System.out.format("%n%s%n", "RegressionTest1.test0928");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 10", (int) (byte) -1, (int) 'a');
         item3.name = "hi!, 10, 0";
         java.lang.String str6 = item3.name;
@@ -6841,9 +6595,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0947() throws Throwable {
+    public void test0929() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0947");
+            System.out.format("%n%s%n", "RegressionTest1.test0929");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -6860,18 +6614,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0948() throws Throwable {
+    public void test0930() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0948");
+            System.out.format("%n%s%n", "RegressionTest1.test0930");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) 'a', (int) '#');
         java.lang.String str4 = item3.toString();
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + ", 97, 35" + "'", str4, ", 97, 35");
     }
 
     @Test
-    public void test0949() throws Throwable {
+    public void test0931() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0949");
+            System.out.format("%n%s%n", "RegressionTest1.test0931");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 10, (int) (short) 0);
         int int4 = item3.sellIn;
         int int5 = item3.quality;
@@ -6881,9 +6635,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0950() throws Throwable {
+    public void test0932() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0950");
+            System.out.format("%n%s%n", "RegressionTest1.test0932");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -6896,18 +6650,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0951() throws Throwable {
+    public void test0933() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0951");
+            System.out.format("%n%s%n", "RegressionTest1.test0933");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 10", (int) (byte) 100, 32);
         java.lang.String str4 = item3.toString();
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, 100, 10, 100, 32" + "'", str4, "hi!, 100, 10, 100, 32");
     }
 
     @Test
-    public void test0952() throws Throwable {
+    public void test0934() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0952");
+            System.out.format("%n%s%n", "RegressionTest1.test0934");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -6919,9 +6673,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0953() throws Throwable {
+    public void test0935() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0953");
+            System.out.format("%n%s%n", "RegressionTest1.test0935");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) (short) 100, (int) (short) 1);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -6931,9 +6685,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0954() throws Throwable {
+    public void test0936() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0954");
+            System.out.format("%n%s%n", "RegressionTest1.test0936");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -6953,9 +6707,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0955() throws Throwable {
+    public void test0937() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0955");
+            System.out.format("%n%s%n", "RegressionTest1.test0937");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97", 0, (int) (byte) 10);
         int int4 = item3.quality;
         item3.name = ", 100, 1, 0, 0";
@@ -6967,9 +6721,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0956() throws Throwable {
+    public void test0938() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0956");
+            System.out.format("%n%s%n", "RegressionTest1.test0938");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", 100, 10);
         int int4 = item3.sellIn;
         int int5 = item3.sellIn;
@@ -6982,18 +6736,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0957() throws Throwable {
+    public void test0939() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0957");
+            System.out.format("%n%s%n", "RegressionTest1.test0939");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 100, 97", 100, (int) 'a');
         int int4 = item3.quality;
         org.junit.Assert.assertTrue("'" + int4 + "' != '" + 97 + "'", int4 == 97);
     }
 
     @Test
-    public void test0958() throws Throwable {
+    public void test0940() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0958");
+            System.out.format("%n%s%n", "RegressionTest1.test0940");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.quality;
@@ -7014,19 +6768,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0959() throws Throwable {
+    public void test0941() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0959");
-        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", 10, 0);
-        item3.quality = (-1);
-        int int6 = item3.sellIn;
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 10 + "'", int6 == 10);
-    }
-
-    @Test
-    public void test0960() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0960");
+            System.out.format("%n%s%n", "RegressionTest1.test0941");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -7046,9 +6790,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0961() throws Throwable {
+    public void test0942() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0961");
+            System.out.format("%n%s%n", "RegressionTest1.test0942");
         com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (byte) 10, (int) (byte) -1);
         int int4 = item3.sellIn;
         com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -7059,9 +6803,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0962() throws Throwable {
+    public void test0943() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0962");
+            System.out.format("%n%s%n", "RegressionTest1.test0943");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 52", (int) (short) 0, 10);
         int int4 = item3.quality;
         int int5 = item3.quality;
@@ -7072,9 +6816,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0963() throws Throwable {
+    public void test0944() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0963");
+            System.out.format("%n%s%n", "RegressionTest1.test0944");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -7093,9 +6837,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0964() throws Throwable {
+    public void test0945() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0964");
+            System.out.format("%n%s%n", "RegressionTest1.test0945");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -7113,9 +6857,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0965() throws Throwable {
+    public void test0946() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0965");
+            System.out.format("%n%s%n", "RegressionTest1.test0946");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         java.lang.String str4 = item3.name;
         int int5 = item3.sellIn;
@@ -7128,18 +6872,18 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0966() throws Throwable {
+    public void test0947() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0966");
+            System.out.format("%n%s%n", "RegressionTest1.test0947");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 10", 32, (int) (byte) 100);
         java.lang.Class<?> wildcardClass4 = item3.getClass();
         org.junit.Assert.assertNotNull(wildcardClass4);
     }
 
     @Test
-    public void test0967() throws Throwable {
+    public void test0948() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0967");
+            System.out.format("%n%s%n", "RegressionTest1.test0948");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -7157,9 +6901,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0968() throws Throwable {
+    public void test0949() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0968");
+            System.out.format("%n%s%n", "RegressionTest1.test0949");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", (int) (byte) 0, (int) (short) 0);
         item3.name = "hi!, -1, 0";
         item3.sellIn = (byte) 0;
@@ -7170,9 +6914,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0969() throws Throwable {
+    public void test0950() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0969");
+            System.out.format("%n%s%n", "RegressionTest1.test0950");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.sellIn;
@@ -7188,9 +6932,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0970() throws Throwable {
+    public void test0951() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0970");
+            System.out.format("%n%s%n", "RegressionTest1.test0951");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -7210,9 +6954,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0971() throws Throwable {
+    public void test0952() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0971");
+            System.out.format("%n%s%n", "RegressionTest1.test0952");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 52", (int) (byte) 10, (-1));
         int int4 = item3.sellIn;
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
@@ -7226,9 +6970,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0972() throws Throwable {
+    public void test0953() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0972");
+            System.out.format("%n%s%n", "RegressionTest1.test0953");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -7242,9 +6986,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0973() throws Throwable {
+    public void test0954() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0973");
+            System.out.format("%n%s%n", "RegressionTest1.test0954");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1", 10, (int) '4');
         int int4 = item3.quality;
         java.lang.String str5 = item3.name;
@@ -7254,16 +6998,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0974() throws Throwable {
+    public void test0955() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0974");
+            System.out.format("%n%s%n", "RegressionTest1.test0955");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 52, 10", (int) (byte) -1, (int) (short) 0);
     }
 
     @Test
-    public void test0975() throws Throwable {
+    public void test0956() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0975");
+            System.out.format("%n%s%n", "RegressionTest1.test0956");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -7281,9 +7025,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0976() throws Throwable {
+    public void test0957() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0976");
+            System.out.format("%n%s%n", "RegressionTest1.test0957");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -7300,9 +7044,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0977() throws Throwable {
+    public void test0958() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0977");
+            System.out.format("%n%s%n", "RegressionTest1.test0958");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -7323,9 +7067,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0978() throws Throwable {
+    public void test0959() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0978");
+            System.out.format("%n%s%n", "RegressionTest1.test0959");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -7351,9 +7095,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0979() throws Throwable {
+    public void test0960() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0979");
+            System.out.format("%n%s%n", "RegressionTest1.test0960");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         com.gildedrose.ItemUpdater itemUpdater5 = itemUpdater4.update();
@@ -7368,9 +7112,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0980() throws Throwable {
+    public void test0961() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0980");
+            System.out.format("%n%s%n", "RegressionTest1.test0961");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         java.lang.String str4 = item3.toString();
         int int5 = item3.quality;
@@ -7387,36 +7131,36 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0981() throws Throwable {
+    public void test0962() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0981");
+            System.out.format("%n%s%n", "RegressionTest1.test0962");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 52, 0", (int) (short) -1, (int) (short) 100);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         org.junit.Assert.assertNotNull(itemUpdater4);
     }
 
     @Test
-    public void test0982() throws Throwable {
+    public void test0963() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0982");
+            System.out.format("%n%s%n", "RegressionTest1.test0963");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 52, 0", (int) (byte) 0, (int) ' ');
         java.lang.String str4 = item3.name;
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, -1, 10, 52, 0" + "'", str4, "hi!, -1, 10, 52, 0");
     }
 
     @Test
-    public void test0983() throws Throwable {
+    public void test0964() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0983");
+            System.out.format("%n%s%n", "RegressionTest1.test0964");
         com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 97", (int) (byte) 10, 97);
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         org.junit.Assert.assertNotNull(itemUpdater4);
     }
 
     @Test
-    public void test0984() throws Throwable {
+    public void test0965() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0984");
+            System.out.format("%n%s%n", "RegressionTest1.test0965");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
         int int5 = item3.sellIn;
@@ -7434,16 +7178,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0985() throws Throwable {
+    public void test0966() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0985");
+            System.out.format("%n%s%n", "RegressionTest1.test0966");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 1", (int) '#', (int) (short) 1);
     }
 
     @Test
-    public void test0986() throws Throwable {
+    public void test0967() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0986");
+            System.out.format("%n%s%n", "RegressionTest1.test0967");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -7463,16 +7207,16 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0987() throws Throwable {
+    public void test0968() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0987");
+            System.out.format("%n%s%n", "RegressionTest1.test0968");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10, 52, 10", (int) (byte) 1, (int) (byte) 10);
     }
 
     @Test
-    public void test0988() throws Throwable {
+    public void test0969() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0988");
+            System.out.format("%n%s%n", "RegressionTest1.test0969");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 0", (int) 'a', (int) (short) 100);
         item3.sellIn = (short) -1;
         int int6 = item3.sellIn;
@@ -7480,30 +7224,30 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0989() throws Throwable {
+    public void test0970() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0989");
+            System.out.format("%n%s%n", "RegressionTest1.test0970");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 0, 35, 32", (int) ' ', 0);
     }
 
     @Test
-    public void test0990() throws Throwable {
+    public void test0971() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0990");
+            System.out.format("%n%s%n", "RegressionTest1.test0971");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, 52", 10, (int) (short) 0);
     }
 
     @Test
-    public void test0991() throws Throwable {
+    public void test0972() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0991");
+            System.out.format("%n%s%n", "RegressionTest1.test0972");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, -1, 10", (int) (short) 1, 10);
     }
 
     @Test
-    public void test0992() throws Throwable {
+    public void test0973() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0992");
+            System.out.format("%n%s%n", "RegressionTest1.test0973");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
         com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
         int int5 = item3.sellIn;
@@ -7519,9 +7263,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0993() throws Throwable {
+    public void test0974() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0993");
+            System.out.format("%n%s%n", "RegressionTest1.test0974");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.sellIn = 1;
         int int6 = item3.sellIn;
@@ -7534,9 +7278,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0994() throws Throwable {
+    public void test0975() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0994");
+            System.out.format("%n%s%n", "RegressionTest1.test0975");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) ' ', (int) 'a');
         item3.quality = (short) 10;
         com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
@@ -7553,30 +7297,30 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0995() throws Throwable {
+    public void test0976() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0995");
+            System.out.format("%n%s%n", "RegressionTest1.test0976");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 10, 10", (-1), (int) (short) 100);
     }
 
     @Test
-    public void test0996() throws Throwable {
+    public void test0977() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0996");
+            System.out.format("%n%s%n", "RegressionTest1.test0977");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 10, 1, 0", (int) (byte) 100, (int) (short) 0);
     }
 
     @Test
-    public void test0997() throws Throwable {
+    public void test0978() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0997");
+            System.out.format("%n%s%n", "RegressionTest1.test0978");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 97, 1, -1", (int) (short) 100, (-1));
     }
 
     @Test
-    public void test0998() throws Throwable {
+    public void test0979() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0998");
+            System.out.format("%n%s%n", "RegressionTest1.test0979");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (-1));
         int int4 = item3.quality;
         int int5 = item3.sellIn;
@@ -7585,9 +7329,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test0999() throws Throwable {
+    public void test0980() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test0999");
+            System.out.format("%n%s%n", "RegressionTest1.test0980");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         java.lang.String str6 = item3.name;
@@ -7610,9 +7354,9 @@ public class RegressionTest1 {
     }
 
     @Test
-    public void test1000() throws Throwable {
+    public void test0981() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "randoop.RegressionTest1.test1000");
+            System.out.format("%n%s%n", "RegressionTest1.test0981");
         com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
         item3.name = "hi!";
         item3.sellIn = '4';
@@ -7627,6 +7371,309 @@ public class RegressionTest1 {
         org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
         org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!, 52, 97" + "'", str9, "hi!, 52, 97");
         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+    }
+
+    @Test
+    public void test0982() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0982");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
+        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
+        int int5 = item3.quality;
+        int int6 = item3.sellIn;
+        item3.name = ", -1, 52";
+        int int9 = item3.quality;
+        int int10 = item3.quality;
+        int int11 = item3.sellIn;
+        int int12 = item3.sellIn;
+        org.junit.Assert.assertNotNull(itemUpdater4);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 97 + "'", int5 == 97);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 97 + "'", int9 == 97);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 97 + "'", int10 == 97);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+    }
+
+    @Test
+    public void test0983() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0983");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, 52, -1", (int) '#', 0);
+        int int4 = item3.sellIn;
+        int int5 = item3.quality;
+        item3.name = "hi!, 1, 1, -1, 97, 100, 10";
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 35 + "'", int4 == 35);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
+    }
+
+    @Test
+    public void test0984() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0984");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 1, -1, 52", (int) (short) -1, (int) '4');
+    }
+
+    @Test
+    public void test0985() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0985");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (byte) -1, (int) 'a');
+        java.lang.String str4 = item3.toString();
+        com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
+        java.lang.String str6 = item3.name;
+        java.lang.String str7 = item3.toString();
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater8 = new com.gildedrose.ConjuredItemUpdater(item3);
+        item3.name = ", -1, 97, 1, 0";
+        item3.quality = 32;
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!, -1, 97" + "'", str4, "hi!, -1, 97");
+        org.junit.Assert.assertNotNull(itemUpdater5);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!, -1, 97" + "'", str7, "hi!, -1, 97");
+    }
+
+    @Test
+    public void test0986() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0986");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
+        item3.name = "hi!";
+        java.lang.String str6 = item3.name;
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater7 = new com.gildedrose.ConjuredItemUpdater(item3);
+        item3.quality = (short) 10;
+        int int10 = item3.quality;
+        int int11 = item3.sellIn;
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater12 = new com.gildedrose.ConjuredItemUpdater(item3);
+        com.gildedrose.ItemUpdater itemUpdater13 = conjuredItemUpdater12.update();
+        com.gildedrose.ItemUpdater itemUpdater14 = conjuredItemUpdater12.update();
+        com.gildedrose.ItemUpdater itemUpdater15 = conjuredItemUpdater12.update();
+        com.gildedrose.ItemUpdater itemUpdater16 = conjuredItemUpdater12.update();
+        com.gildedrose.ItemUpdater itemUpdater17 = conjuredItemUpdater12.update();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 10 + "'", int10 == 10);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
+        org.junit.Assert.assertNotNull(itemUpdater13);
+        org.junit.Assert.assertNotNull(itemUpdater14);
+        org.junit.Assert.assertNotNull(itemUpdater15);
+        org.junit.Assert.assertNotNull(itemUpdater16);
+        org.junit.Assert.assertNotNull(itemUpdater17);
+    }
+
+    @Test
+    public void test0987() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0987");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, 97, 32, -1, 97", (int) 'a', (-1));
+        int int4 = item3.quality;
+        item3.quality = (byte) 0;
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + (-1) + "'", int4 == (-1));
+    }
+
+    @Test
+    public void test0988() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0988");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
+        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
+        item3.name = "hi!, 52, 97";
+        java.lang.String str7 = item3.toString();
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater8 = new com.gildedrose.ConjuredItemUpdater(item3);
+        int int9 = item3.sellIn;
+        java.lang.String str10 = item3.name;
+        item3.quality = (short) 1;
+        item3.quality = (short) 10;
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater15 = new com.gildedrose.ConjuredItemUpdater(item3);
+        item3.sellIn = (byte) 1;
+        java.lang.String str18 = item3.name;
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater19 = new com.gildedrose.ConjuredItemUpdater(item3);
+        item3.sellIn = 100;
+        java.lang.Class<?> wildcardClass22 = item3.getClass();
+        org.junit.Assert.assertNotNull(itemUpdater4);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!, 52, 97, -1, 52" + "'", str7, "hi!, 52, 97, -1, 52");
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!, 52, 97" + "'", str10, "hi!, 52, 97");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!, 52, 97" + "'", str18, "hi!, 52, 97");
+        org.junit.Assert.assertNotNull(wildcardClass22);
+    }
+
+    @Test
+    public void test0989() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0989");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
+        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
+        int int6 = item3.sellIn;
+        item3.name = "";
+        com.gildedrose.ItemUpdater itemUpdater9 = com.gildedrose.ItemUpdater.getInstance(item3);
+        int int10 = item3.sellIn;
+        int int11 = item3.sellIn;
+        item3.sellIn = (byte) 1;
+        item3.sellIn = ' ';
+        org.junit.Assert.assertNotNull(itemUpdater4);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
+        org.junit.Assert.assertNotNull(itemUpdater9);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + (-1) + "'", int10 == (-1));
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
+    }
+
+    @Test
+    public void test0990() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0990");
+        com.gildedrose.Item item3 = new com.gildedrose.Item(", -1, 52", (int) (short) 0, 10);
+        int int4 = item3.quality;
+        item3.name = ", 100, 1, 0, 0";
+        java.lang.String str7 = item3.toString();
+        item3.name = "";
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 10 + "'", int4 == 10);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + ", 100, 1, 0, 0, 0, 10" + "'", str7, ", 100, 1, 0, 0, 0, 10");
+    }
+
+    @Test
+    public void test0991() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0991");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 52, 97, -1, 52, 10, 97", (int) ' ', 10);
+        item3.name = "hi!, -1, 97, 100, 0";
+    }
+
+    @Test
+    public void test0992() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0992");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, -1, 10", (int) (short) 100, (int) (short) 1);
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater4 = new com.gildedrose.ConjuredItemUpdater(item3);
+        com.gildedrose.ItemUpdater itemUpdater5 = com.gildedrose.ItemUpdater.getInstance(item3);
+        java.lang.String str6 = item3.name;
+        org.junit.Assert.assertNotNull(itemUpdater5);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!, -1, 10" + "'", str6, "hi!, -1, 10");
+    }
+
+    @Test
+    public void test0993() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0993");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
+        item3.name = "hi!";
+        item3.sellIn = '4';
+        java.lang.String str8 = item3.name;
+        item3.quality = (byte) 10;
+        item3.quality = (byte) -1;
+        item3.name = "hi!, 52, 97";
+        java.lang.String str15 = item3.toString();
+        int int16 = item3.sellIn;
+        item3.name = "hi!, 52, 97, 52, -1";
+        item3.quality = 'a';
+        int int21 = item3.sellIn;
+        com.gildedrose.ItemUpdater itemUpdater22 = com.gildedrose.ItemUpdater.getInstance(item3);
+        java.lang.Class<?> wildcardClass23 = itemUpdater22.getClass();
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!, 52, 97, 52, -1" + "'", str15, "hi!, 52, 97, 52, -1");
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 52 + "'", int16 == 52);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 52 + "'", int21 == 52);
+        org.junit.Assert.assertNotNull(itemUpdater22);
+        org.junit.Assert.assertNotNull(wildcardClass23);
+    }
+
+    @Test
+    public void test0994() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0994");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!, 1, 1", (int) (byte) 10, 0);
+        int int4 = item3.sellIn;
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 10 + "'", int4 == 10);
+    }
+
+    @Test
+    public void test0995() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0995");
+        com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 1, 100, 52, 35, 1", 10, (int) (byte) 1);
+    }
+
+    @Test
+    public void test0996() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0996");
+        com.gildedrose.Item item3 = new com.gildedrose.Item(", 100, 10", (int) (byte) -1, (int) 'a');
+        item3.name = ", 10, -1";
+        com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
+        com.gildedrose.ItemUpdater itemUpdater7 = itemUpdater6.update();
+        org.junit.Assert.assertNotNull(itemUpdater6);
+        org.junit.Assert.assertNotNull(itemUpdater7);
+    }
+
+    @Test
+    public void test0997() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0997");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
+        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
+        java.lang.String str5 = item3.name;
+        item3.quality = (short) 1;
+        item3.sellIn = ' ';
+        item3.quality = (byte) 0;
+        int int12 = item3.sellIn;
+        org.junit.Assert.assertNotNull(itemUpdater4);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 32 + "'", int12 == 32);
+    }
+
+    @Test
+    public void test0998() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0998");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
+        item3.sellIn = 1;
+        int int6 = item3.sellIn;
+        item3.quality = (byte) 10;
+        java.lang.String str9 = item3.toString();
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater10 = new com.gildedrose.ConjuredItemUpdater(item3);
+        java.lang.String str11 = item3.toString();
+        com.gildedrose.ItemUpdater itemUpdater12 = com.gildedrose.ItemUpdater.getInstance(item3);
+        item3.quality = 0;
+        item3.name = "hi!, 52, 97, 0, 10";
+        item3.quality = (byte) 1;
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater19 = new com.gildedrose.ConjuredItemUpdater(item3);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!, 1, 10" + "'", str9, "hi!, 1, 10");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!, 1, 10" + "'", str11, "hi!, 1, 10");
+        org.junit.Assert.assertNotNull(itemUpdater12);
+    }
+
+    @Test
+    public void test0999() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test0999");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("", (int) (short) -1, (int) '4');
+        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
+        java.lang.String str5 = item3.name;
+        com.gildedrose.ItemUpdater itemUpdater6 = com.gildedrose.ItemUpdater.getInstance(item3);
+        java.lang.String str7 = item3.name;
+        java.lang.String str8 = item3.toString();
+        org.junit.Assert.assertNotNull(itemUpdater4);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertNotNull(itemUpdater6);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + ", -1, 52" + "'", str8, ", -1, 52");
+    }
+
+    @Test
+    public void test1000() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest1.test1000");
+        com.gildedrose.Item item3 = new com.gildedrose.Item("hi!", (int) (short) -1, (int) 'a');
+        com.gildedrose.ItemUpdater itemUpdater4 = com.gildedrose.ItemUpdater.getInstance(item3);
+        com.gildedrose.ConjuredItemUpdater conjuredItemUpdater5 = new com.gildedrose.ConjuredItemUpdater(item3);
+        int int6 = item3.sellIn;
+        item3.name = "";
+        com.gildedrose.ItemUpdater itemUpdater9 = com.gildedrose.ItemUpdater.getInstance(item3);
+        java.lang.String str10 = item3.toString();
+        org.junit.Assert.assertNotNull(itemUpdater4);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + (-1) + "'", int6 == (-1));
+        org.junit.Assert.assertNotNull(itemUpdater9);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + ", -1, 97" + "'", str10, ", -1, 97");
     }
 }
 
