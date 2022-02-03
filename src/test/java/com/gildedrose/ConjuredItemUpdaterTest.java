@@ -12,9 +12,8 @@ public class ConjuredItemUpdaterTest {
     @CsvSource({"10,10,9", "9,9,8", "8,8,7"})
     void shouldDecreaseSellInByOneEachDay(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -23,9 +22,8 @@ public class ConjuredItemUpdaterTest {
     @CsvSource({"10,10,8", "9,8,6", "8,6,4"})
     void shouldDecreaseQualityByTwoEachDay(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -34,9 +32,8 @@ public class ConjuredItemUpdaterTest {
     @CsvSource({"10,1,0", "9,0,0"})
     void shouldNotDecreaseQualityBelowZero(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

@@ -12,9 +12,8 @@ class SulfurasUpdaterTest {
     @CsvSource({"10,10,10", "0,10,0", "-10,10,-10"})
     void shouldNeverChangeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -23,9 +22,8 @@ class SulfurasUpdaterTest {
     @CsvSource({"10,10,80", "0,10,80", "-10,10,80"})
     void shouldNeverChangeInQuality(int sellIn, int quality, int expected) {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

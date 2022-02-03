@@ -11,9 +11,8 @@ class BackstagePassUpdaterTest {
     @CsvSource({"2,1", "0,-1", "-2,-3"})
     void shouldDecreaseSellInByOne(int sellIn, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 10);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -22,9 +21,8 @@ class BackstagePassUpdaterTest {
     @CsvSource({"13,4,5", "12,5,6", "11,6,7"})
     void shouldIncreaseQualityByOneUpTo10DaysBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -33,9 +31,8 @@ class BackstagePassUpdaterTest {
     @CsvSource({"10,4,6", "7,12,14", "6,14,16"})
     void shouldIncreaseQualityByTwoUpTo5DaysBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -44,9 +41,8 @@ class BackstagePassUpdaterTest {
     @CsvSource({"5,16,19", "2,25,28", "1,28,31"})
     void shouldIncreaseQualityByThreeUpToSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -55,9 +51,8 @@ class BackstagePassUpdaterTest {
     @CsvSource({"11,50,50", "6,49,50", "1,48,50"})
     void shouldNotIncreaseQualityAboveFifty(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -66,9 +61,8 @@ class BackstagePassUpdaterTest {
     @CsvSource({"0,10", "-1,10", "-10,10"})
     void shouldBDecreaseQualityToZeroAfterConcert(int sellIn, int quality) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(0, updatedItem.quality);
     }

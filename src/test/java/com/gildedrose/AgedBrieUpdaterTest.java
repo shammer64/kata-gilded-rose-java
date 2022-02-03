@@ -11,9 +11,8 @@ class AgedBrieUpdaterTest {
     @CsvSource({"2,1", "0,-1", "-2,-3"})
     void shouldDecreaseSellInByOne(int sellIn, int expected) {
         Item item = new Item("Aged Brie", sellIn, 1);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -22,9 +21,8 @@ class AgedBrieUpdaterTest {
     @CsvSource({"3,4,5", "2,5,6", "1,6,7"})
     void shouldIncreaseQualityByOneOnOrBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -33,9 +31,8 @@ class AgedBrieUpdaterTest {
     @CsvSource({"0,4,6", "-1,6,8", "-2,8,10"})
     void shouldIncreaseQualityByTwoAfterSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -44,9 +41,8 @@ class AgedBrieUpdaterTest {
     @CsvSource({"0,48,50", "-1,49,50", "-2,50,50"})
     void shouldNeverIncreaseQualityAbove50(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

@@ -12,9 +12,8 @@ class CommonItemUpdaterTest {
     @CsvSource({"1,10,0", "0,10,-1", "-1,10,-2"})
     void shouldDecreaseSellInByOne(int sellIn, int quality, int expected) {
         Item item = new Item("Common Item", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -23,9 +22,8 @@ class CommonItemUpdaterTest {
     @CsvSource({"3,10,9", "2,9,8", "1,8,7"})
     void shouldDecreaseQualityByOneBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Common Item", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -34,9 +32,8 @@ class CommonItemUpdaterTest {
     @CsvSource({"3,0,0", "0,0,0", "-1,1,0"})
     void shouldNotDecreaseQualityBelowZero(int sellIn, int quality, int expected) {
         Item item = new Item("Common Item", sellIn, quality);
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update(item);
+        Item updatedItem = ItemUpdater.getInstance(item).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
