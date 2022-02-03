@@ -12,7 +12,7 @@ class AgedBrieUpdaterTest {
     void shouldDecreaseSellInByOne(int sellIn, int expected) {
         Item item = new Item("Aged Brie", sellIn, 1);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -22,7 +22,7 @@ class AgedBrieUpdaterTest {
     void shouldIncreaseQualityByOneOnOrBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -32,7 +32,7 @@ class AgedBrieUpdaterTest {
     void shouldIncreaseQualityByTwoAfterSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -42,7 +42,7 @@ class AgedBrieUpdaterTest {
     void shouldNeverIncreaseQualityAbove50(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

@@ -12,7 +12,7 @@ class BackstagePassUpdaterTest {
     void shouldDecreaseSellInByOne(int sellIn, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 10);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -22,7 +22,7 @@ class BackstagePassUpdaterTest {
     void shouldIncreaseQualityByOneUpTo10DaysBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -32,7 +32,7 @@ class BackstagePassUpdaterTest {
     void shouldIncreaseQualityByTwoUpTo5DaysBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -42,7 +42,7 @@ class BackstagePassUpdaterTest {
     void shouldIncreaseQualityByThreeUpToSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -52,7 +52,7 @@ class BackstagePassUpdaterTest {
     void shouldNotIncreaseQualityAboveFifty(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -62,7 +62,7 @@ class BackstagePassUpdaterTest {
     void shouldBDecreaseQualityToZeroAfterConcert(int sellIn, int quality) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(0, updatedItem.quality);
     }

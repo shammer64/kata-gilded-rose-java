@@ -13,7 +13,7 @@ public class ConjuredItemUpdaterTest {
     void shouldDecreaseSellInByOneEachDay(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -23,7 +23,7 @@ public class ConjuredItemUpdaterTest {
     void shouldDecreaseQualityByTwoEachDay(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -33,7 +33,7 @@ public class ConjuredItemUpdaterTest {
     void shouldNotDecreaseQualityBelowZero(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

@@ -13,7 +13,7 @@ class SulfurasUpdaterTest {
     void shouldNeverChangeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -23,7 +23,7 @@ class SulfurasUpdaterTest {
     void shouldNeverChangeInQuality(int sellIn, int quality, int expected) {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

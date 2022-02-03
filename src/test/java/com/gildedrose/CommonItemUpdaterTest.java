@@ -13,7 +13,7 @@ class CommonItemUpdaterTest {
     void shouldDecreaseSellInByOne(int sellIn, int quality, int expected) {
         Item item = new Item("Common Item", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -23,7 +23,7 @@ class CommonItemUpdaterTest {
     void shouldDecreaseQualityByOneBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Common Item", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -33,7 +33,7 @@ class CommonItemUpdaterTest {
     void shouldNotDecreaseQualityBelowZero(int sellIn, int quality, int expected) {
         Item item = new Item("Common Item", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.update(item);
+        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
