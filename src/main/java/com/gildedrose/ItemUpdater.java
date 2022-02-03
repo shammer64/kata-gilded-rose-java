@@ -7,10 +7,21 @@ public abstract class ItemUpdater {
         super();
     }
 
-    public abstract Item update();
+    public Item update() {
+        updateQuality();
+        checkQualityBounds();
+        updateSellIn();
+        return item;
+    }
 
     public Item update(Item item) {
         this.item = item;
         return update();
     }
+
+    abstract void updateQuality();
+
+    abstract void checkQualityBounds();
+
+    abstract void updateSellIn();
 }
