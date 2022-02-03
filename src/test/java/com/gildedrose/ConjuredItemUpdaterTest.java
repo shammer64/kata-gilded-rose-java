@@ -14,7 +14,7 @@ public class ConjuredItemUpdaterTest {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -25,7 +25,7 @@ public class ConjuredItemUpdaterTest {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -36,7 +36,7 @@ public class ConjuredItemUpdaterTest {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

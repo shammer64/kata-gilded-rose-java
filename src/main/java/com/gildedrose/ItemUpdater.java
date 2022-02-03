@@ -47,5 +47,10 @@ public abstract class ItemUpdater {
 
     public abstract Item update();
 
+    public Item update(Item item) {
+        this.item = item;
+        return this.update();
+    }
+
 //    public abstract Item update(Item item);
 }

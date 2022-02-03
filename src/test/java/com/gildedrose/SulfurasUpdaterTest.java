@@ -14,7 +14,7 @@ class SulfurasUpdaterTest {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -25,7 +25,7 @@ class SulfurasUpdaterTest {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

@@ -13,7 +13,7 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 10);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -24,7 +24,7 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -35,7 +35,7 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -46,7 +46,7 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -57,7 +57,7 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -68,7 +68,7 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(0, updatedItem.quality);
     }

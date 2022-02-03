@@ -14,7 +14,7 @@ class CommonItemUpdaterTest {
         Item item = new Item("Common Item", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -25,7 +25,7 @@ class CommonItemUpdaterTest {
         Item item = new Item("Common Item", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -36,7 +36,7 @@ class CommonItemUpdaterTest {
         Item item = new Item("Common Item", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

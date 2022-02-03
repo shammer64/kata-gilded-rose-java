@@ -13,7 +13,7 @@ class AgedBrieUpdaterTest {
         Item item = new Item("Aged Brie", sellIn, 1);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -24,7 +24,7 @@ class AgedBrieUpdaterTest {
         Item item = new Item("Aged Brie", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -35,7 +35,7 @@ class AgedBrieUpdaterTest {
         Item item = new Item("Aged Brie", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -46,7 +46,7 @@ class AgedBrieUpdaterTest {
         Item item = new Item("Aged Brie", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        Item updatedItem = itemUpdater.update();
+        Item updatedItem = itemUpdater.update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
