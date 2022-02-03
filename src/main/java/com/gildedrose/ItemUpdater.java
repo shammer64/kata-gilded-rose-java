@@ -23,7 +23,7 @@ public abstract class ItemUpdater {
         super();
     }
 
-    public static ItemUpdater getInstance(Item item) {
+    private static ItemUpdater getInstance(Item item) {
         ItemUpdater itemUpdater = null;
         try {
             Class updaterClass = CLASS_MAP.getOrDefault(item.name, CommonItemUpdater.class);
@@ -34,16 +34,16 @@ public abstract class ItemUpdater {
         return itemUpdater;
     }
 
-    public static ItemUpdater getInstance(String itemName) {
-        ItemUpdater itemUpdater = null;
-        try {
-            Class updaterClass = CLASS_MAP.getOrDefault(itemName, CommonItemUpdater.class);
-            itemUpdater = (ItemUpdater) updaterClass.getDeclaredConstructor().newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return itemUpdater;
-    }
+//    private static ItemUpdater getInstance(String itemName) {
+//        ItemUpdater itemUpdater = null;
+//        try {
+//            Class updaterClass = CLASS_MAP.getOrDefault(itemName, CommonItemUpdater.class);
+//            itemUpdater = (ItemUpdater) updaterClass.getDeclaredConstructor().newInstance();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return itemUpdater;
+//    }
 
     public abstract Item update();
 

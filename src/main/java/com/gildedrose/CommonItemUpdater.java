@@ -2,6 +2,7 @@ package com.gildedrose;
 
 class CommonItemUpdater extends ItemUpdater {
 
+    @Deprecated
     public CommonItemUpdater(Item item) {
         super(item);
     }

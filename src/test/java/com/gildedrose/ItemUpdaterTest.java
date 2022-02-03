@@ -13,15 +13,15 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class ItemUpdaterTest {
 
-    @ParameterizedTest(name = "Factory should return a {1}")
-    @MethodSource("itemUpdaterMappings")
-    void factoryShouldReturnProperItemUpdater(String itemName, Class clazz) {
-        Item item = new Item(itemName, 0, 0);
-
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(itemName);
-
-        assertThat(itemUpdater).isExactlyInstanceOf(clazz);
-    }
+//    @ParameterizedTest(name = "Factory should return a {1}")
+//    @MethodSource("itemUpdaterMappings")
+//    void factoryShouldReturnProperItemUpdater(String itemName, Class clazz) {
+//        Item item = new Item(itemName, 0, 0);
+//
+//        ItemUpdater itemUpdater = ItemUpdater.getInstance(itemName);
+//
+//        assertThat(itemUpdater).isExactlyInstanceOf(clazz);
+//    }
 
     static Stream<Arguments> itemUpdaterMappings() {
         return Stream.of(
