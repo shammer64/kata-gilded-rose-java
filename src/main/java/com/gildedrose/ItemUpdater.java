@@ -9,15 +9,15 @@ public abstract class ItemUpdater {
 
     public Item update(Item item) {
         this.item = item;
-        updateQuality();
-        checkQualityBounds();
-        updateSellIn();
+        updateQuality(item);
+        checkQualityBounds(item);
+        updateSellIn(item);
         return this.item;
     }
 
-    abstract void updateQuality();
+    abstract void updateQuality(Item item);
 
-    abstract void checkQualityBounds();
+    abstract void checkQualityBounds(Item item);
 
-    abstract void updateSellIn();
+    abstract void updateSellIn(Item item);
 }

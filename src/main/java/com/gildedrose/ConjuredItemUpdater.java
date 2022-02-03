@@ -7,7 +7,7 @@ public class ConjuredItemUpdater extends CommonItemUpdater {
     }
 
     @Override
-    void updateQuality() {
-        item.quality -= 2;
+    void updateQuality(Item item) {
+        this.item.quality -= 2;
     }
 }
