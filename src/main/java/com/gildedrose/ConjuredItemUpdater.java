@@ -8,6 +8,6 @@ public class ConjuredItemUpdater extends CommonItemUpdater {
 
     @Override
     void updateQuality(Item item) {
-        this.item.quality -= 2;
+        item.quality -= 2;
     }
 }

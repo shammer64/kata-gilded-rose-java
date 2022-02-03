@@ -8,8 +8,8 @@ class BackstagePassUpdater extends CommonItemUpdater {
 
     @Override
     void updateQuality(Item item) {
-        this.item.quality = (this.item.sellIn > 10) ? this.item.quality + 1 :
-                (this.item.sellIn > 5) ? this.item.quality + 2 :
-                        (this.item.sellIn > 0) ? this.item.quality + 3 : 0;
+        item.quality = (item.sellIn > 10) ? item.quality + 1 :
+                (item.sellIn > 5) ? item.quality + 2 :
+                        (item.sellIn > 0) ? item.quality + 3 : 0;
     }
 }

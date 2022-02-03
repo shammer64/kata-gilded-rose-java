@@ -8,20 +8,20 @@ class CommonItemUpdater extends ItemUpdater {
 
     @Override
     void updateQuality(Item item) {
-        this.item.quality = (this.item.sellIn > 0) ?
-                (this.item.quality - 1) :
-                (this.item.quality - 2);
+        item.quality = (item.sellIn > 0) ?
+                (item.quality - 1) :
+                (item.quality - 2);
     }
 
     @Override
     void checkQualityBounds(Item item) {
-        this.item.quality = (this.item.quality < 0) ?
-                this.item.quality = 0 :
-                this.item.quality > 50 ? 50 : this.item.quality;
+        item.quality = (item.quality < 0) ?
+                item.quality = 0 :
+                item.quality > 50 ? 50 : item.quality;
     }
 
     @Override
     void updateSellIn(Item item) {
-        this.item.sellIn -= 1;
+        item.sellIn -= 1;
     }
 }
