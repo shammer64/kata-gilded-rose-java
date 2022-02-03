@@ -15,8 +15,7 @@ public class ItemUpdaterFactory {
         INSTANCE_MAP.put("Conjured Mana Cake", new ConjuredItemUpdater());
     }
 
-    public static ItemUpdater getInstance(String itemName) {
+    public ItemUpdater getInstance(String itemName) {
         return INSTANCE_MAP.getOrDefault(itemName, DEFAULT_INSTANCE);
     }
-
 }

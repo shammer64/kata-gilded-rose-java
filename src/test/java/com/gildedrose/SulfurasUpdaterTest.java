@@ -1,6 +1,5 @@
 package com.gildedrose;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -8,12 +7,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SulfurasUpdaterTest {
 
+    private final ItemUpdaterFactory itemUpdaterFactory = new ItemUpdaterFactory();
+
     @ParameterizedTest(name = "SellIn should never change")
     @CsvSource({"10,10,10", "0,10,0", "-10,10,-10"})
     void shouldNeverChangeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
 
-        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -23,7 +24,7 @@ class SulfurasUpdaterTest {
     void shouldNeverChangeInQuality(int sellIn, int quality, int expected) {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
 
-        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

@@ -7,12 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BackstagePassUpdaterTest {
 
+    private final ItemUpdaterFactory itemUpdaterFactory = new ItemUpdaterFactory();
+
     @ParameterizedTest(name = "SellIn should decrease by 1")
     @CsvSource({"2,1", "0,-1", "-2,-3"})
     void shouldDecreaseSellInByOne(int sellIn, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 10);
 
-        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -22,7 +24,7 @@ class BackstagePassUpdaterTest {
     void shouldIncreaseQualityByOneUpTo10DaysBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -32,7 +34,7 @@ class BackstagePassUpdaterTest {
     void shouldIncreaseQualityByTwoUpTo5DaysBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -42,7 +44,7 @@ class BackstagePassUpdaterTest {
     void shouldIncreaseQualityByThreeUpToSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -52,7 +54,7 @@ class BackstagePassUpdaterTest {
     void shouldNotIncreaseQualityAboveFifty(int sellIn, int quality, int expected) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -62,7 +64,7 @@ class BackstagePassUpdaterTest {
     void shouldBDecreaseQualityToZeroAfterConcert(int sellIn, int quality) {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
 
-        Item updatedItem = ItemUpdaterFactory.getInstance(item.name).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(0, updatedItem.quality);
     }
