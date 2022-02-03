@@ -1,11 +1,10 @@
 package com.gildedrose;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
 public abstract class ItemUpdater {
-    final Item item;
+    protected Item item = null;
     private static final Map<String, Class> CLASS_MAP = new HashMap<>();
 
     static {
@@ -16,7 +15,12 @@ public abstract class ItemUpdater {
     }
 
     public ItemUpdater(Item item) {
+        super();
         this.item = item;
+    }
+
+    public ItemUpdater() {
+        super();
     }
 
     public static ItemUpdater getInstance(Item item) {
@@ -30,5 +34,20 @@ public abstract class ItemUpdater {
         return itemUpdater;
     }
 
-    public abstract ItemUpdater update();
+    public static ItemUpdater getInstance(String itemName) {
+        ItemUpdater itemUpdater = null;
+        try {
+            Class updaterClass = CLASS_MAP.getOrDefault(itemName, CommonItemUpdater.class);
+            itemUpdater = (ItemUpdater) updaterClass.getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return itemUpdater;
+    }
+
+    public abstract Item update();
+
+    public static Item update(Item item) {
+        return getInstance(item).update();
+    }
 }

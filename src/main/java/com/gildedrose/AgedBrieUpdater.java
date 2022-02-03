@@ -5,6 +5,10 @@ class AgedBrieUpdater extends CommonItemUpdater {
         super(item);
     }
 
+    public AgedBrieUpdater() {
+        super();
+    }
+
     @Override
     void updateQuality() {
         item.quality = item.sellIn > 0 ? item.quality + 1 : item.quality + 2;

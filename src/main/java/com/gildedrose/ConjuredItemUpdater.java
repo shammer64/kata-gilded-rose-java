@@ -5,6 +5,10 @@ public class ConjuredItemUpdater extends CommonItemUpdater {
         super(item);
     }
 
+    public ConjuredItemUpdater() {
+        super();
+    }
+
     @Override
     void updateQuality() {
         item.quality -= 2;

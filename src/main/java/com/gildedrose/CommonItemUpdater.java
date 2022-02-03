@@ -6,12 +6,16 @@ class CommonItemUpdater extends ItemUpdater {
         super(item);
     }
 
+    public CommonItemUpdater() {
+        super();
+    }
+
     @Override
-    public ItemUpdater update() {
+    public Item update() {
         updateQuality();
         checkQualityBounds();
         updateSellIn();
-        return this;
+        return item;
     }
 
     void updateQuality() {
