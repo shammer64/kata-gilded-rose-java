@@ -15,7 +15,13 @@ public abstract class ItemUpdater {
 
     abstract void updateQuality(Item item);
 
-    abstract void checkQualityBounds(Item item);
+    void checkQualityBounds(Item item) {
+        item.quality = (item.quality < 0) ?
+                item.quality = 0 :
+                item.quality > 50 ? 50 : item.quality;
+    }
 
-    abstract void updateSellIn(Item item);
+    void updateSellIn(Item item) {
+        item.sellIn -= 1;
+    }
 }

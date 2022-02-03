@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class ConjuredItemUpdater extends CommonItemUpdater {
+public class ConjuredItemUpdater extends ItemUpdater {
 
     public ConjuredItemUpdater() {
         super();
@@ -10,4 +10,5 @@ public class ConjuredItemUpdater extends CommonItemUpdater {
     void updateQuality(Item item) {
         item.quality -= 2;
     }
+
 }

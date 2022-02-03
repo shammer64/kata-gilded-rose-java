@@ -13,15 +13,4 @@ class CommonItemUpdater extends ItemUpdater {
                 (item.quality - 2);
     }
 
-    @Override
-    void checkQualityBounds(Item item) {
-        item.quality = (item.quality < 0) ?
-                item.quality = 0 :
-                item.quality > 50 ? 50 : item.quality;
-    }
-
-    @Override
-    void updateSellIn(Item item) {
-        item.sellIn -= 1;
-    }
 }

@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class SulfurasUpdater extends CommonItemUpdater {
+class SulfurasUpdater extends ItemUpdater {
 
     public SulfurasUpdater() {
         super();

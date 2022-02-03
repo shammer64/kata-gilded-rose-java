@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class BackstagePassUpdater extends CommonItemUpdater {
+class BackstagePassUpdater extends ItemUpdater {
 
     public BackstagePassUpdater() {
         super();
@@ -12,4 +12,5 @@ class BackstagePassUpdater extends CommonItemUpdater {
                 (item.sellIn > 5) ? item.quality + 2 :
                         (item.sellIn > 0) ? item.quality + 3 : 0;
     }
+
 }

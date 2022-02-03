@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class AgedBrieUpdater extends CommonItemUpdater {
+class AgedBrieUpdater extends ItemUpdater {
 
     public AgedBrieUpdater() {
         super();
@@ -10,4 +10,5 @@ class AgedBrieUpdater extends CommonItemUpdater {
     void updateQuality(Item item) {
         item.quality = item.sellIn > 0 ? item.quality + 1 : item.quality + 2;
     }
+
 }
