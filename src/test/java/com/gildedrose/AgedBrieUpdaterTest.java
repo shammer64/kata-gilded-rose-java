@@ -7,12 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AgedBrieUpdaterTest {
 
+    private final ItemUpdaterFactory itemUpdaterFactory = new ItemUpdaterFactory();
+
     @ParameterizedTest(name = "SellIn should decrease by 1 each day")
     @CsvSource({"2,1", "0,-1", "-2,-3"})
     void shouldDecreaseSellInByOne(int sellIn, int expected) {
         Item item = new Item("Aged Brie", sellIn, 1);
 
-        Item updatedItem = ItemUpdater.getInstance(item).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -22,7 +24,7 @@ class AgedBrieUpdaterTest {
     void shouldIncreaseQualityByOneOnOrBeforeSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.getInstance(item).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -32,7 +34,7 @@ class AgedBrieUpdaterTest {
     void shouldIncreaseQualityByTwoAfterSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.getInstance(item).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -42,7 +44,7 @@ class AgedBrieUpdaterTest {
     void shouldNeverIncreaseQualityAbove50(int sellIn, int quality, int expected) {
         Item item = new Item("Aged Brie", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.getInstance(item).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }

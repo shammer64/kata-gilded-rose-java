@@ -1,6 +1,5 @@
 package com.gildedrose;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -8,12 +7,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ConjuredItemUpdaterTest {
 
+    private final ItemUpdaterFactory itemUpdaterFactory = new ItemUpdaterFactory();
+
     @ParameterizedTest(name = "SellIn should decrease by 1 each day")
     @CsvSource({"10,10,9", "9,9,8", "8,8,7"})
     void shouldDecreaseSellInByOneEachDay(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.getInstance(item).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.sellIn);
     }
@@ -23,7 +24,7 @@ public class ConjuredItemUpdaterTest {
     void shouldDecreaseQualityByTwoEachDay(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.getInstance(item).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
@@ -33,7 +34,7 @@ public class ConjuredItemUpdaterTest {
     void shouldNotDecreaseQualityBelowZero(int sellIn, int quality, int expected) {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
 
-        Item updatedItem = ItemUpdater.getInstance(item).update(item);
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
 
         assertEquals(expected, updatedItem.quality);
     }
