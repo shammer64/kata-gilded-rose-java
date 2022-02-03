@@ -6,6 +6,10 @@ class BackstagePassUpdater extends CommonItemUpdater {
         super(item);
     }
 
+    public BackstagePassUpdater() {
+        super();
+    }
+
     @Override
     void updateQuality() {
         item.quality = (item.sellIn > 10) ? item.quality + 1 :

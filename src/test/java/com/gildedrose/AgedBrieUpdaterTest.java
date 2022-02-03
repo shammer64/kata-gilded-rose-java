@@ -13,9 +13,9 @@ class AgedBrieUpdaterTest {
         Item item = new Item("Aged Brie", sellIn, 1);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.sellIn);
+        assertEquals(expected, updatedItem.sellIn);
     }
 
     @ParameterizedTest(name = "Quality should increase by 1 before sellIn")
@@ -24,9 +24,9 @@ class AgedBrieUpdaterTest {
         Item item = new Item("Aged Brie", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
     @ParameterizedTest(name = "Quality should increase by 2 after sellIn")
@@ -35,9 +35,9 @@ class AgedBrieUpdaterTest {
         Item item = new Item("Aged Brie", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
     @ParameterizedTest(name = "Quality never exceeds 50")
@@ -46,9 +46,9 @@ class AgedBrieUpdaterTest {
         Item item = new Item("Aged Brie", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
 

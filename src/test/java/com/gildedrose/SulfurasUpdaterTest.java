@@ -14,9 +14,9 @@ class SulfurasUpdaterTest {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.sellIn);
+        assertEquals(expected, updatedItem.sellIn);
     }
 
     @ParameterizedTest(name = "Quality should never change")
@@ -25,9 +25,9 @@ class SulfurasUpdaterTest {
         Item item = new Item("Sulfuras, Hand of Ragnaros", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
 }

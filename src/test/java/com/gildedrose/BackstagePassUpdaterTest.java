@@ -13,9 +13,9 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 10);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.sellIn);
+        assertEquals(expected, updatedItem.sellIn);
     }
 
     @ParameterizedTest(name = "Quality should increase by 1 up to 10 days prior to sellIn")
@@ -24,9 +24,9 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
     @ParameterizedTest(name = "Quality should increase by 2 up to 5 days prior to sellIn")
@@ -35,9 +35,9 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
     @ParameterizedTest(name = "Quality should increase by 3 in last 5 days prior to sellIn")
@@ -46,9 +46,9 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
     @ParameterizedTest(name = "Quality should never exceed 50")
@@ -57,9 +57,9 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
     @ParameterizedTest(name = "Quality should drop to 0 after concert")
@@ -68,9 +68,9 @@ class BackstagePassUpdaterTest {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(0, item.quality);
+        assertEquals(0, updatedItem.quality);
     }
 
 

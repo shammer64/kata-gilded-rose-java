@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -13,9 +14,9 @@ class CommonItemUpdaterTest {
         Item item = new Item("Common Item", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.sellIn);
+        assertEquals(expected, updatedItem.sellIn);
     }
 
     @ParameterizedTest(name = "Quality should decrease by 1")
@@ -24,9 +25,9 @@ class CommonItemUpdaterTest {
         Item item = new Item("Common Item", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
     @ParameterizedTest(name = "Quality should never decrease below 0")
@@ -35,9 +36,9 @@ class CommonItemUpdaterTest {
         Item item = new Item("Common Item", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
 }

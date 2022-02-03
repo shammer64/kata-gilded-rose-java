@@ -14,9 +14,9 @@ public class ConjuredItemUpdaterTest {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.sellIn);
+        assertEquals(expected, updatedItem.sellIn);
     }
 
     @ParameterizedTest(name = "Quality should decrease by 2 each day")
@@ -25,9 +25,9 @@ public class ConjuredItemUpdaterTest {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
     @ParameterizedTest(name = "Quality should not decrease below 0")
@@ -36,9 +36,9 @@ public class ConjuredItemUpdaterTest {
         Item item = new Item("Conjured Mana Cake", sellIn, quality);
         ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
 
-        itemUpdater.update();
+        Item updatedItem = itemUpdater.update();
 
-        assertEquals(expected, item.quality);
+        assertEquals(expected, updatedItem.quality);
     }
 
 }

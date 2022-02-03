@@ -18,7 +18,7 @@ public class ItemUpdaterTest {
     void factoryShouldReturnProperItemUpdater(String itemName, Class clazz) {
         Item item = new Item(itemName, 0, 0);
 
-        ItemUpdater itemUpdater = ItemUpdater.getInstance(item);
+        ItemUpdater itemUpdater = ItemUpdater.getInstance(itemName);
 
         assertThat(itemUpdater).isExactlyInstanceOf(clazz);
     }

@@ -6,6 +6,10 @@ class SulfurasUpdater extends CommonItemUpdater {
         super(item);
     }
 
+    public SulfurasUpdater() {
+        super();
+    }
+
     @Override
     void updateQuality() {
         item.quality = 80;
@@ -13,9 +17,11 @@ class SulfurasUpdater extends CommonItemUpdater {
 
     @Override
     void checkQualityBounds() {
+        item.quality += 0;
     }
 
     @Override
     void updateSellIn() {
+        item.sellIn += 0;
     }
 }
