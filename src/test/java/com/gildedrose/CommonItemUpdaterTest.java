@@ -19,9 +19,19 @@ class CommonItemUpdaterTest {
         assertEquals(expected, updatedItem.sellIn);
     }
 
-    @ParameterizedTest(name = "Quality should decrease by 1")
+    @ParameterizedTest(name = "Quality should decrease by 1 before SellIn")
     @CsvSource({"3,10,9", "2,9,8", "1,8,7"})
     void shouldDecreaseQualityByOneBeforeSellInDate(int sellIn, int quality, int expected) {
+        Item item = new Item("Common Item", sellIn, quality);
+
+        Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
+
+        assertEquals(expected, updatedItem.quality);
+    }
+
+    @ParameterizedTest(name = "Quality should decrease by 2 on or after SellIn")
+    @CsvSource({"0,10,8", "-1,8,6", "-2,6,4"})
+    void shouldDecreaseQualityByTwoOnOrAfterSellInDate(int sellIn, int quality, int expected) {
         Item item = new Item("Common Item", sellIn, quality);
 
         Item updatedItem = itemUpdaterFactory.getInstance(item.name).update(item);
