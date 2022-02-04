@@ -5,7 +5,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SulfurasUpdaterTest {
+class SulfurasItemUpdaterTest {
 
     private final ItemUpdaterFactory itemUpdaterFactory = new ItemUpdaterFactory();
 

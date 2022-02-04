@@ -9,9 +9,9 @@ public class ItemUpdaterFactory {
     private static final ItemUpdater DEFAULT_INSTANCE = new CommonItemUpdater();
 
     static {
-        INSTANCE_MAP.put("Aged Brie", new AgedBrieUpdater());
-        INSTANCE_MAP.put("Backstage passes to a TAFKAL80ETC concert", new BackstagePassUpdater());
-        INSTANCE_MAP.put("Sulfuras, Hand of Ragnaros", new SulfurasUpdater());
+        INSTANCE_MAP.put("Aged Brie", new AgedBrieItemUpdater());
+        INSTANCE_MAP.put("Backstage passes to a TAFKAL80ETC concert", new BackstagePassItemUpdater());
+        INSTANCE_MAP.put("Sulfuras, Hand of Ragnaros", new SulfurasItemUpdater());
         INSTANCE_MAP.put("Conjured Mana Cake", new ConjuredItemUpdater());
     }
 

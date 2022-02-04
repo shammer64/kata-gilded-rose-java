@@ -28,9 +28,9 @@ class ItemUpdaterFactoryTest {
 
     static Stream<Arguments> itemUpdaterMappings() {
         return Stream.of(
-                arguments("Sulfuras, Hand of Ragnaros", SulfurasUpdater.class),
-                arguments("Aged Brie", AgedBrieUpdater.class),
-                arguments("Backstage passes to a TAFKAL80ETC concert", BackstagePassUpdater.class),
+                arguments("Sulfuras, Hand of Ragnaros", SulfurasItemUpdater.class),
+                arguments("Aged Brie", AgedBrieItemUpdater.class),
+                arguments("Backstage passes to a TAFKAL80ETC concert", BackstagePassItemUpdater.class),
                 arguments("Conjured Mana Cake", ConjuredItemUpdater.class),
                 arguments("Anything Else", CommonItemUpdater.class)
         );
