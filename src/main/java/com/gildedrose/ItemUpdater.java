@@ -1,33 +1,27 @@
 package com.gildedrose;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public abstract class ItemUpdater {
-    protected final Item item;
-    private static final Map<String, Class> CLASS_MAP = new HashMap<>();
 
-    static {
-        CLASS_MAP.put("Aged Brie", AgedBrieUpdater.class);
-        CLASS_MAP.put("Backstage passes to a TAFKAL80ETC concert", BackstagePassUpdater.class);
-        CLASS_MAP.put("Sulfuras, Hand of Ragnaros", SulfurasUpdater.class);
-        CLASS_MAP.put("Conjured Mana Cake", ConjuredItemUpdater.class);
+    public ItemUpdater() {
+        super();
     }
 
-    public ItemUpdater(Item item) {
-        this.item = item;
+    public Item update(Item item) {
+        updateQuality(item);
+        checkQualityBounds(item);
+        updateSellIn(item);
+        return item;
     }
 
-    public static ItemUpdater getInstance(Item item) {
-        ItemUpdater itemUpdater = null;
-        try {
-            Class updaterClass = CLASS_MAP.getOrDefault(item.name, CommonItemUpdater.class);
-            itemUpdater = (ItemUpdater) updaterClass.getDeclaredConstructor(Item.class).newInstance(item);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return itemUpdater;
+    abstract void updateQuality(Item item);
+
+    void checkQualityBounds(Item item) {
+        item.quality = (item.quality < 0) ?
+                item.quality = 0 :
+                item.quality > 50 ? 50 : item.quality;
     }
 
-    public abstract ItemUpdater update();
+    void updateSellIn(Item item) {
+        item.sellIn -= 1;
+    }
 }

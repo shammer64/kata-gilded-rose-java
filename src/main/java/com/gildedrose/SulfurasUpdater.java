@@ -1,21 +1,23 @@
 package com.gildedrose;
 
-class SulfurasUpdater extends CommonItemUpdater {
+class SulfurasUpdater extends ItemUpdater {
 
-    public SulfurasUpdater(Item item) {
-        super(item);
+    public SulfurasUpdater() {
+        super();
     }
 
     @Override
-    protected void updateQuality() {
+    void updateQuality(Item item) {
         item.quality = 80;
     }
 
     @Override
-    protected void checkQualityBounds() {
+    void checkQualityBounds(Item item) {
+        item.quality += 0;
     }
 
     @Override
-    protected void updateSellIn() {
+    void updateSellIn(Item item) {
+        item.sellIn += 0;
     }
 }
